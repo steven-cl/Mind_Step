@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         val handler = Handler()
         handler.postDelayed({
             reenvio()
-        },2000L)
+        },500L)
     }
 
     //Esta funcion comprueba si la sesion del usuario esta iniciada, en ese caso, se dirige al area que le correspode
