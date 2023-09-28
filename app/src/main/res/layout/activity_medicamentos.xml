@@ -4,7 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".Medico.Medicamentos">
 
+    <View
+        android:id="@+id/toppanel"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:background="@color/MenuColor"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+
+    <View
+        android:id="@+id/topsombra"
+        android:layout_width="wrap_content"
+        android:layout_height="1.2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#494E4C"
+        android:elevation="50dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toppanel"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/bottompanel"
+        android:layout_width="wrap_content"
+        android:layout_height="89dp"
+        android:background="@color/MenuColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/bottomsombra"
+        android:layout_width="wrap_content"
+        android:layout_height="1.2dp"
+        android:layout_above="@id/bottompanel"
+        android:background="#494E4C"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/bottompanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center_horizontal"
+        android:elevation="50dp"
+        android:outlineAmbientShadowColor="@color/BackgroundColor"
+        android:outlineSpotShadowColor="@color/black"
+        tools:ignore="MissingConstraints"
+        tools:targetApi="p" />
+
+    <View
+        android:id="@+id/perfil_clickable"
+        android:layout_width="85dp"
+        android:layout_height="79dp"
+        android:layout_above="@id/perfil"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,MissingContraints" />
+
+    <ImageView
+        android:id="@+id/perfil"
+        android:layout_width="68dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/perfil_clickable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/perfil_clickable"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usuario"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/LogoImage"
+        android:layout_width="107dp"
+        android:layout_height="113dp"
+        app:srcCompat="@drawable/simbolo_logo"
+        tools:layout_editor_absoluteX="-10dp"
+        tools:layout_editor_absoluteY="-19dp"
+        tools:ignore="MissingConstraints"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/textLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/identidad_extra_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/verde"
+        android:textSize="17sp"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="32dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
