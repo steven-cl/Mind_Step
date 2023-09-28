@@ -11,10 +11,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Hacer una pequeña pausa para tener una imagen de inicio antes de iniciar el programa principal
         val handler = Handler()
         handler.postDelayed({
             reenvio()
-        },500L)
+        },1000L)
     }
 
     //Esta funcion comprueba si la sesion del usuario esta iniciada, en ese caso, se dirige al area que le correspode
