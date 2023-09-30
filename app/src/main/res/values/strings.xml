@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Mind Step</string>
-    <string name="correo">Correo Electrónico</string>
+    <string name="correo">Usuario</string>
+    <string name="hint_correo">Ingrese su correo o nombre de usuario</string>
+    <string name="hint_contraseña">Ingrese su contraseña</string>
     <string name="contraseña">Contraseña</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
 </resources>
