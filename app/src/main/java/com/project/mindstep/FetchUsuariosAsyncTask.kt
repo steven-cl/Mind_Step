@@ -1,5 +1,8 @@
+@file:Suppress("DEPRECATION")
+
 package com.project.mindstep
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.AsyncTask
@@ -10,13 +13,15 @@ import java.sql.Connection
 import java.sql.ResultSet
 import java.sql.Statement
 
-class FetchUsuariosAsyncTask(private val context: Context, private val taskListener: TaskListener) :
+class FetchUsuariosAsyncTask(private @field:SuppressLint("StaticFieldLeak") val context: Context,
+                             private val taskListener: TaskListener) :
     AsyncTask<String, Void, String>() {
 
     interface TaskListener {
         fun onTaskCompleted(result: String)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun doInBackground(vararg params: String): String {
         var result = ""
 
@@ -29,7 +34,7 @@ class FetchUsuariosAsyncTask(private val context: Context, private val taskListe
         var resultSet: ResultSet? = null
 
         try {
-            connection = DatabaseConnection.getConnection()
+            connection = DataBaseConnection.getConnection()
             if (connection != null) {
                 statement = connection.createStatement()
                 resultSet = statement.executeQuery(
@@ -76,9 +81,9 @@ class FetchUsuariosAsyncTask(private val context: Context, private val taskListe
 
                         // Start the Agenda activity
                         context.startActivity(intent)
-                    } else {
-
-                    }
+                    } // else {
+                     //
+                    // }
                 }
 
             } else {
@@ -92,18 +97,15 @@ class FetchUsuariosAsyncTask(private val context: Context, private val taskListe
         } finally {
             resultSet?.close()
             statement?.close()
-            DatabaseConnection.closeConnection(connection)
+            DataBaseConnection.closeConnection(connection)
         }
 
         Log.d("FetchUsuariosAsyncTask", "Resultado: $result")
         return result
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onPostExecute(result: String) {
         taskListener.onTaskCompleted(result)
     }
 }
-
-
-
-

@@ -1,21 +1,20 @@
 package com.project.mindstep.Login
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.project.mindstep.R
+import android.content.Intent
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.project.mindstep.FetchUsuariosAsyncTask
 import com.project.mindstep.Paciente.Agenda
-import com.project.mindstep.R
 
 class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
 
     private lateinit var emailEditText: EditText
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -33,6 +32,7 @@ class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 // Initiate the login process
                 val fetchUsuariosAsyncTask = FetchUsuariosAsyncTask(this, this)
+                @Suppress("DEPRECATION")
                 fetchUsuariosAsyncTask.execute(email, password)
             } else {
                 // Show a toast message for empty fields
@@ -40,16 +40,7 @@ class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
             }
         }
     }
-    //te voy a dejar aqui los comandos que ponga
-    //cd OneDrive
-    //cd Escritorio
-    //cd MindStep
-    //cd Mind_Step_main
-    //git pull -r upstream main  //Este lo vas a utilizar para descargar la ultima version disponible antes de empeezar a trabajar en el proyecto
-    //los siguientes comandos son para cuando ya terminaste ciertos cambios en el proyecto
-    //git add .
-    //git commit -m "Cambios"
-    //git push origin desarrolloparalelo
+
     override fun onTaskCompleted(result: String) {
         // Handle the result of the login process
         if (result == "Authentication failed") {

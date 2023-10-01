@@ -2,9 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
 
 
+=======
+    <uses-permission android:name="android.permission.INTERNET"/>
+>>>>>>> 1b2c9c2 (unificacion de los cambios)
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
