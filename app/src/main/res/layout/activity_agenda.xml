@@ -10,7 +10,7 @@
     <View
         android:id="@+id/toppanel"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="120dp"
         android:background="@color/MenuColor"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,33 +85,38 @@
         app:srcCompat="@drawable/usuario"
         android:importantForAccessibility="no" />
 
+    <ImageView
+        android:id="@+id/LogoImage"
+        android:layout_width="107dp"
+        android:layout_height="113dp"
+        app:srcCompat="@drawable/simbolo_logo"
+        tools:layout_editor_absoluteX="-10dp"
+        tools:layout_editor_absoluteY="-19dp"
+        tools:ignore="MissingConstraints"
+        android:importantForAccessibility="no" />
+
     <TextView
         android:id="@+id/textLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
         android:fontFamily="@font/identidad_extra_bold"
         android:text="@string/app_name"
         android:textColor="@color/verde"
         android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/toppanel"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="32dp"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="79dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="4dp"
-        app:layout_constraintBottom_toBottomOf="@+id/toppanel"
-        app:layout_constraintStart_toStartOf="@+id/toppanel"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538"
-        app:srcCompat="@drawable/logo_icono"
-        tools:ignore="ContentDescription" />
+    <TextView
+        android:id="@+id/textViewUsuarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/identidad_extra_bold_italic"
+        android:text="Prueba"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/perfil_clickable"
+        app:layout_constraintTop_toBottomOf="@+id/perfil_clickable" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

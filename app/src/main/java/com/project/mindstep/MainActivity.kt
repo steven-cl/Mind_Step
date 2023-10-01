@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.project.mindstep.Login.Login
 import com.project.mindstep.Paciente.Agenda
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     //en caso contrario se dirige al login
     fun reenvio(){
         //por ahora para ver los resultados visuales me redirigira automaticamente a la agenda del paciente
-        val intent = Intent(this, Agenda::class.java)
+        val intent = Intent(this, Login::class.java)
         startActivity(intent)
     }
 }

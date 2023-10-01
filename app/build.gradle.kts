@@ -36,6 +36,9 @@ android {
 }
 
 dependencies {
+    //conectar a la base de datos
+    implementation ("net.sourceforge.jtds:jtds:1.3.1")
+
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
