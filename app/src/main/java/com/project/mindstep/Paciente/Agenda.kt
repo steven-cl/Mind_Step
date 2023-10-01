@@ -37,11 +37,10 @@ class Agenda : AppCompatActivity() {
         // Extract other user data here...
 
         // Display the user data in the TextView
-        val userInformation = nombres
         // Add other user data to the string...S
 
-        Log.d("Agenda", "User Data: $userInformation")
-        textViewUsuarios.text = userInformation
+        Log.d("Agenda", "User Data: $nombres")
+        textViewUsuarios.text = nombres
     }
 
 }

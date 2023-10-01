@@ -8,14 +8,14 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="391dp"
-        android:layout_height="754dp"
+        android:layout_width="409dp"
+        android:layout_height="591dp"
+        android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/simbolo_logo"
-        tools:ignore="MissingConstraints"
-        android:importantForAccessibility="no" />
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
