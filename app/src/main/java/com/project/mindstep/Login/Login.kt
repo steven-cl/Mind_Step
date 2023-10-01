@@ -40,16 +40,7 @@ class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
             }
         }
     }
-    //te voy a dejar aqui los comandos que ponga
-    //cd OneDrive
-    //cd Escritorio
-    //cd MindStep
-    //cd Mind_Step_main
-    //git pull -r upstream main  //Este lo vas a utilizar para descargar la ultima version disponible antes de empeezar a trabajar en el proyecto
-    //los siguientes comandos son para cuando ya terminaste ciertos cambios en el proyecto
-    //git add .
-    //git commit -m "Cambios"
-    //git push origin desarrolloparalelo
+
     override fun onTaskCompleted(result: String) {
         // Handle the result of the login process
         if (result == "Authentication failed") {
