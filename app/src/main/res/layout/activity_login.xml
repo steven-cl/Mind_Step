@@ -34,7 +34,7 @@
         android:background="@drawable/fondo_text_view"
         android:fontFamily="@font/identidad_extra_bold"
         android:gravity="center"
-        android:text="@string/correo"
+        android:text="@string/Usuario"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

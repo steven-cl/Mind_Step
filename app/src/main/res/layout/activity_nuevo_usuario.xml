@@ -113,4 +113,469 @@
         app:srcCompat="@drawable/logo_icono"
         tools:ignore="ContentDescription" />
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="659dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottompanel"
+        app:layout_constraintTop_toBottomOf="@+id/topsombra"
+        tools:ignore="MissingConstraints,ScrollViewCount"
+        tools:layout_editor_absoluteX="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textExpediente"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_bold"
+                    android:gravity="center"
+                    android:text="@string/Expediente"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ETExpediente"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_light"
+                    android:gravity="center"
+                    android:hint="@string/Expediente_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textCedula"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_bold"
+                    android:gravity="center"
+                    android:text="@string/cedula"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ETCedula"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_light"
+                    android:gravity="center"
+                    android:hint="@string/cedula_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textNombre"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_bold"
+                    android:gravity="center"
+                    android:text="@string/nombres"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ETNombres"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_light"
+                    android:gravity="center"
+                    android:hint="@string/nombres_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textApellidos"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_bold"
+                    android:gravity="center"
+                    android:text="@string/Apellidos"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ETApellidos"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_light"
+                    android:gravity="center"
+                    android:hint="@string/Apellidos_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textUser"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_bold"
+                    android:gravity="center"
+                    android:text="@string/username"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ETUser"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_light"
+                    android:gravity="center"
+                    android:hint="@string/usename_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textCorreo"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_bold"
+                    android:gravity="center"
+                    android:text="@string/correo"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ETCorreo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_light"
+                    android:gravity="center"
+                    android:hint="@string/correo_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textContraseña"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_bold"
+                    android:gravity="center"
+                    android:text="@string/contraseña_"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ETContraseña"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_light"
+                    android:gravity="center"
+                    android:hint="@string/contrasña_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textFecha"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_bold"
+                    android:gravity="center"
+                    android:text="@string/Fecha"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnSelecionarFecha"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:text="@string/fecha_boton"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/identidad_extra_bold"/>
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <CalendarView
+                android:id="@+id/calendarioFechaNac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/calendario_fondo" />
+
+            <Space
+                android:id="@+id/spaceCalendario"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textTipo"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_bold"
+                    android:gravity="center"
+                    android:text="@string/tipo_de_cuenta"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/RolesUsuarios"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:gravity="center"
+                    />
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnRegistrar"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:fontFamily="@font/identidad_extra_bold"
+                    android:text="@string/registrar"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

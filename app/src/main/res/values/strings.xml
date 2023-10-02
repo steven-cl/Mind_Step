@@ -1,8 +1,26 @@
 <resources>
     <string name="app_name">Mind Step</string>
-    <string name="correo">Usuario</string>
+    <string name="Usuario">Usuario</string>
     <string name="hint_correo">Ingrese su correo o nombre de usuario</string>
     <string name="hint_contraseña">Ingrese su contraseña</string>
     <string name="contraseña">Contraseña</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="Expediente">N° Expediente: </string>
+    <string name="Expediente_hint">Ingrese el expediente</string>
+    <string name="cedula">N° Cédula: </string>
+    <string name="cedula_hint">Ingrese la cedula</string>
+    <string name="nombres">Nombres: </string>
+    <string name="nombres_hint">Ingrese los nombres</string>
+    <string name="Apellidos">Apellidos: </string>
+    <string name="Apellidos_hint">ingrese los apellidos</string>
+    <string name="Fecha">Fecha de Nacimiento: </string>
+    <string name="correo">Correo: </string>
+    <string name="correo_hint">ingrese el correo</string>
+    <string name="contraseña_">Contraseña: </string>
+    <string name="contrasña_hint">ingrese la contraseña</string>
+    <string name="tipo_de_cuenta">Tipo de cuenta: </string>
+    <string name="username">Nombre de Usuario: </string>
+    <string name="usename_hint">ingrese el nombre de usuario</string>
+    <string name="registrar">Registrar</string>
+    <string name="fecha_boton">Seleccionar fecha</string>
 </resources>
