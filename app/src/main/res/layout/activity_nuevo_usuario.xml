@@ -160,7 +160,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_light"
                     android:gravity="center"
                     android:hint="@string/Expediente_hint"
                     android:importantForAutofill="no"
@@ -206,7 +205,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_light"
                     android:gravity="center"
                     android:hint="@string/cedula_hint"
                     android:importantForAutofill="no"
@@ -252,7 +250,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_light"
                     android:gravity="center"
                     android:hint="@string/nombres_hint"
                     android:importantForAutofill="no"
@@ -298,7 +295,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_light"
                     android:gravity="center"
                     android:hint="@string/Apellidos_hint"
                     android:importantForAutofill="no"
@@ -344,7 +340,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_light"
                     android:gravity="center"
                     android:hint="@string/usename_hint"
                     android:importantForAutofill="no"
@@ -390,11 +385,10 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_light"
                     android:gravity="center"
                     android:hint="@string/correo_hint"
                     android:importantForAutofill="no"
-                    android:inputType="text" />
+                    android:inputType="textEmailAddress" />
 
                 <Space
                     android:layout_width="20dp"
@@ -436,11 +430,10 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_light"
                     android:gravity="center"
                     android:hint="@string/contrasña_hint"
                     android:importantForAutofill="no"
-                    android:inputType="text" />
+                    android:inputType="textVisiblePassword" />
 
                 <Space
                     android:layout_width="20dp"
@@ -476,31 +469,22 @@
                     android:layout_width="35dp"
                     android:layout_height="wrap_content" />
 
-                <Button
-                    android:id="@+id/btnSelecionarFecha"
+                <EditText
+                    android:id="@+id/ETFechaNac"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:background="@drawable/fondo_verde_claro"
-                    android:text="@string/fecha_boton"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/identidad_extra_bold"/>
+                    android:gravity="center"
+                    android:hint="@string/fecha_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="date" />
 
                 <Space
                     android:layout_width="20dp"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="35dp" />
-
-            <CalendarView
-                android:id="@+id/calendarioFechaNac"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/calendario_fondo" />
 
             <Space
                 android:id="@+id/spaceCalendario"

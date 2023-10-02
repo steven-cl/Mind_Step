@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.project.mindstep.AdminUser.NuevoUsuario
-import com.project.mindstep.Login.Login
-import com.project.mindstep.TestCreator.AdministrarTest
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

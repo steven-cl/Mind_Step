@@ -22,5 +22,5 @@
     <string name="username">Nombre de Usuario: </string>
     <string name="usename_hint">ingrese el nombre de usuario</string>
     <string name="registrar">Registrar</string>
-    <string name="fecha_boton">Seleccionar fecha</string>
+    <string name="fecha_hint">ingrese la fecha</string>
 </resources>
