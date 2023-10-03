@@ -1,10 +1,12 @@
 package com.project.mindstep.Paciente
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.project.mindstep.R
 import android.util.Log
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 
@@ -24,8 +26,8 @@ class Agenda : AppCompatActivity() {
             // User data is available, you can extract and display it
             displayUserData(userData)
         } else {
-            // If no user data, show a message and finish the activity
-            Toast.makeText(this, "Error: Login not successful", Toast.LENGTH_SHORT).show()
+
+
             finish()
         }
     }
@@ -34,7 +36,7 @@ class Agenda : AppCompatActivity() {
         //val numeroExpediente = userData.getString("NumeroExpediente", "")
         //val cedula = userData.getString("Cedula", "")
         val nombres = userData.getString("Nombres","")
-        // Extract other user data here...
+        val tipoUser = userData.getString("TipoUser", "")
 
         // Display the user data in the TextView
         // Add other user data to the string...S
@@ -42,5 +44,35 @@ class Agenda : AppCompatActivity() {
         Log.d("Agenda", "User Data: $nombres")
         textViewUsuarios.text = nombres
     }
+
+    fun onViewClick(view: View) {
+        when (view.id) {
+            R.id.view4 -> navigateToActivity1()
+            R.id.view5 -> navigateToActivity2()
+            R.id.view6 -> navigateToActivity3()
+            R.id.view -> navigateToActivity4()
+        }
+    }
+
+    private fun navigateToActivity1() {
+        val intent = Intent(this, Estado::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToActivity2() {
+        val intent = Intent(this, Test::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToActivity3() {
+        val intent = Intent(this, AjustesPaciente::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToActivity4() {
+        val intent = Intent(this, Agenda::class.java)
+        startActivity(intent)
+    }
+
 
 }

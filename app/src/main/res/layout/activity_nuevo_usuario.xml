@@ -40,8 +40,39 @@
         android:background="@color/MenuColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="1.5dp"
+        android:layout_height="89dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="1.5dp"
+        android:layout_height="89dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="1.5dp"
+        android:layout_height="89dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="1.0" />
 
     <View
         android:id="@+id/bottomsombra"
@@ -139,21 +170,6 @@
                     android:layout_width="20dp"
                     android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/textExpediente"
-                    android:layout_width="139dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_bold"
-                    android:gravity="center"
-                    android:text="@string/Expediente"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <Space
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content" />
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/inputLayoutExpediente"
                     android:layout_width="0dp"
@@ -161,7 +177,6 @@
                     android:layout_weight="2"
                     app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/textExpediente"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -197,21 +212,6 @@
                     android:layout_width="20dp"
                     android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/textCedula"
-                    android:layout_width="139dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_bold"
-                    android:gravity="center"
-                    android:text="@string/cedula"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <Space
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content" />
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/inputLayoutCedula"
                     android:layout_width="0dp"
@@ -219,7 +219,6 @@
                     android:layout_weight="2"
                     app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/textCedula"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -254,21 +253,6 @@
                     android:layout_width="20dp"
                     android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/textNombre"
-                    android:layout_width="139dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_bold"
-                    android:gravity="center"
-                    android:text="@string/nombres"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <Space
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content" />
-
                 <!-- Cambia de EditText a TextInputLayout -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/inputLayoutNombre"
@@ -277,7 +261,6 @@
                     android:layout_weight="2"
                     app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/textNombre"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <!-- EditText ahora está dentro de TextInputLayout -->
@@ -315,21 +298,6 @@
                     android:layout_width="20dp"
                     android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/textApellidos"
-                    android:layout_width="139dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_bold"
-                    android:gravity="center"
-                    android:text="@string/Apellidos"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <Space
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content" />
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/inputLayoutApellidos"
                     android:layout_width="0dp"
@@ -337,7 +305,6 @@
                     android:layout_weight="2"
                     app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/textApellidos"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -373,22 +340,6 @@
                     android:layout_width="20dp"
                     android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/textUser"
-                    android:layout_width="139dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_bold"
-                    android:gravity="center"
-                    android:layout_marginTop="-10dp"
-                    android:text="@string/username"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <Space
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content" />
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/inputLayoutUsuario"
                     android:layout_width="0dp"
@@ -396,7 +347,6 @@
                     android:layout_weight="2"
                     app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/textUser"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -434,21 +384,6 @@
                     android:layout_width="20dp"
                     android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/textCorreo"
-                    android:layout_width="139dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_bold"
-                    android:gravity="center"
-                    android:text="@string/correo"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <Space
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content" />
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/inputLayoutCorreo"
                     android:layout_width="0dp"
@@ -456,7 +391,6 @@
                     android:layout_weight="2"
                     app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/textCorreo"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -492,21 +426,6 @@
                     android:layout_width="20dp"
                     android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/textContraseña"
-                    android:layout_width="139dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_bold"
-                    android:gravity="center"
-                    android:text="@string/contraseña_"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <Space
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content" />
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/inputLayoutContraseña"
                     android:layout_width="0dp"
@@ -514,7 +433,6 @@
                     android:layout_weight="2"
                     app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/textContraseña"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -550,22 +468,6 @@
                     android:layout_width="20dp"
                     android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/textFecha"
-                    android:layout_width="139dp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:fontFamily="@font/identidad_extra_bold"
-                    android:layout_marginTop="-10dp"
-                    android:gravity="center"
-                    android:text="@string/Fecha"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-
-                <Space
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content" />
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/inputLayoutFechaNac"
                     android:layout_width="0dp"
@@ -573,8 +475,8 @@
                     android:layout_weight="2"
                     app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/textFecha"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TooManyViews">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/ETFechaNac"
@@ -672,5 +574,91 @@
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/ajuste_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottompanel"
+        app:layout_constraintStart_toEndOf="@+id/view9"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/ajuste"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/regitro_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="@+id/bottompanel"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/registro" />
+
+    <ImageView
+        android:id="@+id/administrador_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view8"
+        app:layout_constraintStart_toEndOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/administrador" />
+
+    <ImageView
+        android:id="@+id/citas_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view9"
+        app:layout_constraintStart_toEndOf="@+id/view8"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/cita" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="100dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="100dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view8"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="100dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottompanel"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toEndOf="@+id/view9"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="100dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.526" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

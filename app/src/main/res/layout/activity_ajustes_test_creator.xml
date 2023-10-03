@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".Paciente.Estado">
+    tools:context=".Paciente.Agenda">
 
     <View
         android:id="@+id/toppanel"
@@ -18,7 +18,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         />
-
     <View
         android:id="@+id/topsombra"
         android:layout_width="wrap_content"
@@ -61,42 +60,19 @@
         tools:ignore="MissingConstraints"
         tools:targetApi="p" />
 
-    <View
-        android:id="@+id/perfil_clickable"
-        android:layout_width="85dp"
-        android:layout_height="79dp"
-        android:layout_above="@id/perfil"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,MissingContraints" />
-
-    <ImageView
-        android:id="@+id/perfil"
-        android:layout_width="68dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="9dp"
-        app:layout_constraintBottom_toBottomOf="@+id/perfil_clickable"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/perfil_clickable"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/usuario"
-        android:importantForAccessibility="no" />
-
     <TextView
         android:id="@+id/textLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/identidad_extra_bold"
         android:text="@string/app_name"
         android:textColor="@color/verde"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@+id/toppanel"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/toppanel"
+        app:layout_constraintStart_toStartOf="@+id/toppanel"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.037"
         tools:ignore="MissingConstraints" />
@@ -105,7 +81,7 @@
         android:id="@+id/imageView2"
         android:layout_width="79dp"
         android:layout_height="67dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/toppanel"
         app:layout_constraintStart_toStartOf="@+id/toppanel"
         app:layout_constraintTop_toTopOf="parent"
@@ -113,25 +89,68 @@
         app:srcCompat="@drawable/logo_icono"
         tools:ignore="ContentDescription" />
 
+    <ImageView
+        android:id="@+id/perfil"
+        android:layout_width="168dp"
+        android:layout_height="164dp"
+        android:layout_marginTop="60dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topsombra"
+        app:srcCompat="@drawable/usuario" />
+
+
+    <Button
+        android:id="@+id/btnCambiarNombre"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/fondo_verde_claro"
+        android:text="@string/cambiar_nombre"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/perfil" />
+
+
+    <Button
+        android:id="@+id/btnCambiarContraseña"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/fondo_verde_claro"
+        android:text="@string/cambiar_contrasenia"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCambiarNombre" />
+
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/fondo_verde_claro"
+        android:text="@string/ayuda"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bottomsombra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <View
         android:id="@+id/view7"
         android:layout_width="1.5dp"
         android:layout_height="89dp"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:layout_constraintVertical_bias="0.166" />
-
-    <View
-        android:id="@+id/view8"
-        android:layout_width="1.5dp"
-        android:layout_height="89dp"
-        android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/view4"
-        app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toStartOf="@+id/view9"
+        app:layout_constraintStart_toStartOf="@+id/bottompanel"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel" />
 
     <View
         android:id="@+id/view9"
@@ -139,20 +158,22 @@
         android:layout_height="89dp"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="@+id/bottompanel"
+        app:layout_constraintHorizontal_bias="0.665"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/ajuste_imagen"
         android:layout_width="79dp"
         android:layout_height="79dp"
+        android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bottompanel"
         app:layout_constraintStart_toEndOf="@+id/view9"
-        app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:srcCompat="@drawable/ajuste"
-        android:importantForAccessibility="no" />
+        app:layout_constraintTop_toTopOf="@+id/view6"
+        app:srcCompat="@drawable/ajuste" />
 
     <ImageView
         android:id="@+id/calendario_imagen"
@@ -161,8 +182,8 @@
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view7"
-        app:layout_constraintStart_toStartOf="@+id/bottompanel"
-        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
         app:srcCompat="@drawable/calendario" />
 
     <ImageView
@@ -171,66 +192,39 @@
         android:layout_height="79dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view8"
+        app:layout_constraintEnd_toStartOf="@+id/view9"
         app:layout_constraintStart_toEndOf="@+id/view7"
         app:layout_constraintTop_toTopOf="@+id/bottompanel"
         app:srcCompat="@drawable/grafica" />
 
-    <ImageView
-        android:id="@+id/test_imagen"
-        android:layout_width="79dp"
-        android:layout_height="79dp"
-        android:importantForAccessibility="no"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view9"
-        app:layout_constraintStart_toEndOf="@+id/view8"
-        app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:srcCompat="@drawable/test" />
-
-    <View
-        android:id="@+id/view4"
-        android:layout_width="100dp"
-        android:layout_height="89dp"
-        android:visibility="invisible"
-        android:onClick="onViewClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/view7"
-        app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:layout_constraintVertical_bias="0.526" />
-
     <View
         android:id="@+id/view5"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="89dp"
         android:visibility="invisible"
-        android:onClick="onViewClick"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/view8"
-        app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:layout_constraintVertical_bias="0.526" />
+        app:layout_constraintEnd_toStartOf="@+id/view9"
+        app:layout_constraintStart_toEndOf="@+id/view7"
+        app:layout_constraintTop_toBottomOf="@+id/bottomsombra" />
 
     <View
         android:id="@+id/view6"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="89dp"
         android:visibility="invisible"
-        android:onClick="onViewClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bottompanel"
-        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toEndOf="@+id/view9"
-        app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:layout_constraintVertical_bias="0.526" />
+        app:layout_constraintTop_toBottomOf="@+id/bottomsombra" />
 
     <View
         android:id="@+id/view"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="89dp"
         android:visibility="invisible"
-        android:onClick="onViewClick"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:layout_constraintVertical_bias="0.526" />
+        app:layout_constraintTop_toBottomOf="@+id/bottomsombra" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

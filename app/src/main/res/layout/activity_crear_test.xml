@@ -113,4 +113,112 @@
         app:srcCompat="@drawable/logo_icono"
         tools:ignore="ContentDescription" />
 
+    <TextView
+        android:id="@+id/textViewUsuarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/identidad_extra_bold_italic"
+        android:text="Prueba"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/perfil_clickable"
+        app:layout_constraintTop_toBottomOf="@+id/perfil_clickable" />
+
+    <TextView
+        android:id="@+id/pa_saber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/identidad_extra_bold_italic"
+        android:text="Prueba_Crear_test"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/bottompanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topsombra" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="1.5dp"
+        android:layout_height="89dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view9"
+        app:layout_constraintStart_toStartOf="@+id/bottompanel"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="1.5dp"
+        android:layout_height="89dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottompanel"
+        app:layout_constraintHorizontal_bias="0.665"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ajuste_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottompanel"
+        app:layout_constraintStart_toEndOf="@+id/view9"
+        app:layout_constraintTop_toTopOf="@+id/view6"
+        app:srcCompat="@drawable/ajuste" />
+
+    <ImageView
+        android:id="@+id/calendario_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:srcCompat="@drawable/calendario" />
+
+    <ImageView
+        android:id="@+id/grafica_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view9"
+        app:layout_constraintStart_toEndOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/grafica" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="130dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view9"
+        app:layout_constraintStart_toEndOf="@+id/view7"
+        app:layout_constraintTop_toBottomOf="@+id/bottomsombra" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="130dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottompanel"
+        app:layout_constraintStart_toEndOf="@+id/view9"
+        app:layout_constraintTop_toBottomOf="@+id/bottomsombra" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="130dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomsombra" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

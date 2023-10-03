@@ -10,8 +10,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import com.project.mindstep.AdminUser.NuevoUsuario
 import com.project.mindstep.FetchUsuariosAsyncTask
+import com.project.mindstep.Medico.Resultados
 import com.project.mindstep.Paciente.Agenda
+import com.project.mindstep.TestCreator.CrearTest
 
 class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
 
@@ -71,10 +74,23 @@ class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
         if (result == "Authentication failed") {
             // Show a toast message for failed authentication
             Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
-        } else {
+        }
+
+        //me dan todos, me
+        //ahi esta verifica que los activities esten correctos ya se con un texto
+        if(result == "Paciente"){
             // Authentication successful, navigate to the Agenda activity
             startActivity(Intent(this, Agenda::class.java))
-            finish() // Optional: finish the current activity to prevent going back to the login screen
+            finish() // finish the current activity to prevent going back to the login screen
+        }else if (result == "Medico"){
+            startActivity(Intent(this, Resultados::class.java))
+            finish()
+        }else if (result == "Gestor de usuario"){
+            startActivity(Intent(this, NuevoUsuario::class.java))
+            finish()
+        }else if (result == "Creador de Test"){
+            startActivity(Intent(this, CrearTest::class.java))
+            finish()
         }
     }
 }

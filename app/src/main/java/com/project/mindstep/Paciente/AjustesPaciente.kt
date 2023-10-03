@@ -6,12 +6,11 @@ import android.os.Bundle
 import android.view.View
 import com.project.mindstep.R
 
-class Estado : AppCompatActivity() {
+class AjustesPaciente : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_estado)
+        setContentView(R.layout.activity_ajustes_paciente)
     }
-
 
 
     fun onViewClick(view: View) {

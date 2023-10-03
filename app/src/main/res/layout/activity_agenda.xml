@@ -18,7 +18,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         />
-
     <View
         android:id="@+id/topsombra"
         android:layout_width="wrap_content"
@@ -123,5 +122,125 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/perfil_clickable"
         app:layout_constraintTop_toBottomOf="@+id/perfil_clickable" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="1.5dp"
+        android:layout_height="89dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="1.5dp"
+        android:layout_height="89dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="1.5dp"
+        android:layout_height="89dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/ajuste_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottompanel"
+        app:layout_constraintStart_toEndOf="@+id/view9"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/ajuste"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/calendario_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="@+id/bottompanel"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/calendario" />
+
+    <ImageView
+        android:id="@+id/grafica_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view8"
+        app:layout_constraintStart_toEndOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/grafica" />
+
+    <ImageView
+        android:id="@+id/test_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view9"
+        app:layout_constraintStart_toEndOf="@+id/view8"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/test" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="100dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        android:onClick="onViewClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="100dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        android:onClick="onViewClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view8"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="100dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        android:onClick="onViewClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bottompanel"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toEndOf="@+id/view9"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.526" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="100dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        android:onClick="onViewClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.526" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

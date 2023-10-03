@@ -8,7 +8,11 @@ import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
+import com.project.mindstep.AdminUser.NuevoUsuario
+import com.project.mindstep.Medico.Resultados
 import com.project.mindstep.Paciente.Agenda
+import com.project.mindstep.TestCreator.CrearTest
 import java.sql.Connection
 import java.sql.ResultSet
 import java.sql.Statement
@@ -74,16 +78,30 @@ class FetchUsuariosAsyncTask(private @field:SuppressLint("StaticFieldLeak") val 
                             // Add other user data here...
                         }
 
-                        // Create Intent to start the Agenda activity
-                        val intent = Intent(context, Agenda::class.java).apply {
-                            putExtras(userData)
+                        if (userData.getString("TipoUser", "") == "Paciente"){
+                            val intent = Intent(context, Agenda::class.java).apply {
+                                putExtras(userData)
+                            }
+                            context.startActivity(intent)
+                            result="Paciente"
+                        }else if(userData.getString("TipoUser", "") == "Medico"){
+                            val intent = Intent(context, Resultados::class.java).apply {
+                                putExtras(userData)
+                            }
+                            context.startActivity(intent)
+                            result = "Medico"
+                        }else if(userData.getString("TipoUser", "") == "Gestor de usuario"){
+                            result = "Gestor de usuario"
+                        }else if(userData.getString("TipoUser", "") == "Creador de Test"){
+                            val intent = Intent(context, CrearTest::class.java).apply {
+                                putExtras(userData)
+                            }
+                            context.startActivity(intent)
+                            result = "Creador de Test"
                         }
-
-                        // Start the Agenda activity
-                        context.startActivity(intent)
-                    } // else {
-                     //
-                    // }
+                    }/* else {
+                        Toast.makeText(context, "Correo o contraseña invalidos", Toast.LENGTH_SHORT).show()
+                    }*/
                 }
 
             } else {

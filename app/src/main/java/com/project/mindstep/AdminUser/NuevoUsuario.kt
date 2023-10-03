@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
 
+@Suppress("DEPRECATION")
 class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.ValidationListener {
 
     private lateinit var expediente: EditText
@@ -39,7 +40,7 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         registrarButton = findViewById(R.id.btnRegistrar)
 
         // Set up role spinner
-        val roles = listOf("Selecciona un rol", "Paciente", "Medico", "Gestor de usuario", "Creador de Test")
+        val roles = listOf("Paciente", "Medico", "Gestor de usuario", "Creador de Test")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, roles)
         tipoCuenta.adapter = adapter
 
@@ -107,7 +108,6 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
     private fun validateFields(): Boolean {
 
 
-
         // Utiliza TextInputLayout para mostrar mensajes de error debajo de los EditText
         val inputLayoutExpediente = findViewById<TextInputLayout>(R.id.inputLayoutExpediente)
         val inputLayoutCedula = findViewById<TextInputLayout>(R.id.inputLayoutCedula)
@@ -117,13 +117,11 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         val inputLayoutContrasenia = findViewById<TextInputLayout>(R.id.inputLayoutContraseña)
         val inputLayoutFechaNac = findViewById<TextInputLayout>(R.id.inputLayoutFechaNac)
 
-
         // Validating the fields based on the mentioned criteria
         val expedienteValue = expediente.text.toString().trim()
         val cedulaValue = cedula.text.toString()
         val nombresValue = nombres.text.toString()
         val apellidosValue = apellidos.text.toString()
-        val usernameValue = username.text.toString()
         val correoValue = correo.text.toString()
         val contraseniaValue = contrasenia.text.toString()
         val fechaNacimientoValue = fechaNacimiento.text.toString()
@@ -132,7 +130,6 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         val cedulaPattern = Pattern.compile("^[a-zA-Z0-9-]+$")
         val nombresPattern = Pattern.compile("^[a-zA-Z ]+$")
         val apellidosPattern = Pattern.compile("^[a-zA-Z ]+$")
-        val usernamePattern = Pattern.compile("^[a-zA-Z0-9]+$")
         val correoPattern = Pattern.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")
         val contraseniaPattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$")
 
@@ -193,43 +190,12 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
             inputLayoutContrasenia.error = null  // Limpiar el mensaje de error si la validación es exitosa
         }
 
-        if (!expedientePattern.matcher(expedienteValue).matches()) {
-            Toast.makeText(this, "Número de expediente no válido", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        if (!cedulaPattern.matcher(cedulaValue).matches()) {
-            Toast.makeText(this, "Número de cédula no válido", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        if (!nombresPattern.matcher(nombresValue).matches()) {
-            Toast.makeText(this, "Nombres no válidos", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        if (!apellidosPattern.matcher(apellidosValue).matches()) {
-            Toast.makeText(this, "Apellidos no válidos", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        if (!correoPattern.matcher(correoValue).matches()) {
-            Toast.makeText(this, "Correo electrónico no válido", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        if (!contraseniaPattern.matcher(contraseniaValue).matches()) {
-            Toast.makeText(this, "Contraseña no válida", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
         if (tipoCuenta.selectedItemPosition == 0) {
             Toast.makeText(this, "Selecciona un rol válido", Toast.LENGTH_SHORT).show()
             return false
         }
 
-        // You may add more specific validations for other fields
+
         return true
     }
 }
-
