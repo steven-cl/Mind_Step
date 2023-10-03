@@ -40,7 +40,7 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         registrarButton = findViewById(R.id.btnRegistrar)
 
         // Set up role spinner
-        val roles = listOf("Selecciona un rol", "Paciente", "Medico", "Gestor de usuario", "Creador de Test")
+        val roles = listOf("Paciente", "Medico", "Gestor de usuario", "Creador de Test")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, roles)
         tipoCuenta.adapter = adapter
 
