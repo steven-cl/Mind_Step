@@ -1,10 +1,9 @@
 package com.project.mindstep.AdminUser
 
-import android.annotation.SuppressLint
-import android.os.AsyncTask
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputLayout
 import com.project.mindstep.R
 import java.text.SimpleDateFormat
 import java.util.*
@@ -106,12 +105,22 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
     }
 
     private fun validateFields(): Boolean {
+
+
+        // Utiliza TextInputLayout para mostrar mensajes de error debajo de los EditText
+        val inputLayoutExpediente = findViewById<TextInputLayout>(R.id.inputLayoutExpediente)
+        val inputLayoutCedula = findViewById<TextInputLayout>(R.id.inputLayoutCedula)
+        val inputLayoutNombre = findViewById<TextInputLayout>(R.id.inputLayoutNombre)
+        val inputLayoutApellidos = findViewById<TextInputLayout>(R.id.inputLayoutApellidos)
+        val inputLayoutCorreo = findViewById<TextInputLayout>(R.id.inputLayoutCorreo)
+        val inputLayoutContrasenia = findViewById<TextInputLayout>(R.id.inputLayoutContraseña)
+        val inputLayoutFechaNac = findViewById<TextInputLayout>(R.id.inputLayoutFechaNac)
+
         // Validating the fields based on the mentioned criteria
         val expedienteValue = expediente.text.toString().trim()
         val cedulaValue = cedula.text.toString()
         val nombresValue = nombres.text.toString()
         val apellidosValue = apellidos.text.toString()
-        val usernameValue = username.text.toString()
         val correoValue = correo.text.toString()
         val contraseniaValue = contrasenia.text.toString()
         val fechaNacimientoValue = fechaNacimiento.text.toString()
@@ -120,7 +129,6 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         val cedulaPattern = Pattern.compile("^[a-zA-Z0-9-]+$")
         val nombresPattern = Pattern.compile("^[a-zA-Z ]+$")
         val apellidosPattern = Pattern.compile("^[a-zA-Z ]+$")
-        val usernamePattern = Pattern.compile("^[a-zA-Z0-9]+$")
         val correoPattern = Pattern.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")
         val contraseniaPattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$")
 
@@ -130,39 +138,55 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
 
         try {
             dateFormat.parse(fechaNacimientoValue)
+            inputLayoutFechaNac.error = null  // Limpiar el mensaje de error si la validación es exitosa
         } catch (e: Exception) {
-            Toast.makeText(this, "Fecha de nacimiento no válida", Toast.LENGTH_SHORT).show()
+            inputLayoutFechaNac.error = "Fecha no válida"
             return false
         }
 
+
         if (!expedientePattern.matcher(expedienteValue).matches()) {
-            Toast.makeText(this, "Número de expediente no válido", Toast.LENGTH_SHORT).show()
+            inputLayoutExpediente.error = "Numero de Expediente no válido"
             return false
+        } else {
+            inputLayoutExpediente.error = null  // Limpiar el mensaje de error si la validación es exitosa
         }
 
         if (!cedulaPattern.matcher(cedulaValue).matches()) {
-            Toast.makeText(this, "Número de cédula no válido", Toast.LENGTH_SHORT).show()
+            inputLayoutCedula.error = "Cedula no válida"
             return false
+        } else {
+            inputLayoutCedula.error = null  // Limpiar el mensaje de error si la validación es exitosa
         }
 
         if (!nombresPattern.matcher(nombresValue).matches()) {
-            Toast.makeText(this, "Nombres no válidos", Toast.LENGTH_SHORT).show()
+            inputLayoutNombre.error = "Nombres no válidos"
             return false
+        } else {
+            inputLayoutNombre.error = null  // Limpiar el mensaje de error si la validación es exitosa
         }
 
+
+        // Validación de Apellidos
         if (!apellidosPattern.matcher(apellidosValue).matches()) {
-            Toast.makeText(this, "Apellidos no válidos", Toast.LENGTH_SHORT).show()
+            inputLayoutApellidos.error = "Apellidos no válidos"
             return false
+        } else {
+            inputLayoutApellidos.error = null
         }
 
         if (!correoPattern.matcher(correoValue).matches()) {
-            Toast.makeText(this, "Correo electrónico no válido", Toast.LENGTH_SHORT).show()
+            inputLayoutCorreo.error = "Correo no válido"
             return false
+        } else {
+            inputLayoutCorreo.error = null  // Limpiar el mensaje de error si la validación es exitosa
         }
 
         if (!contraseniaPattern.matcher(contraseniaValue).matches()) {
-            Toast.makeText(this, "Contraseña no válida", Toast.LENGTH_SHORT).show()
+            inputLayoutContrasenia.error = "Contraseña no válida"
             return false
+        } else {
+            inputLayoutContrasenia.error = null  // Limpiar el mensaje de error si la validación es exitosa
         }
 
         if (tipoCuenta.selectedItemPosition == 0) {
@@ -170,7 +194,6 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
             return false
         }
 
-        // You may add more specific validations for other fields
 
         return true
     }
