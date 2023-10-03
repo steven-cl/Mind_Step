@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import com.project.mindstep.AdminUser.NuevoUsuario
+import com.project.mindstep.Login.Login
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     //en caso contrario se dirige al login
     private fun reenvio(){
         //por ahora para ver los resultados visuales me redirigira automaticamente a la agenda del paciente
-        val intent = Intent(this, NuevoUsuario::class.java)
+        val intent = Intent(this, Login::class.java)
         startActivity(intent)
     }
 }

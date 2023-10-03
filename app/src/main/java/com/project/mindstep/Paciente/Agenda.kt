@@ -24,8 +24,8 @@ class Agenda : AppCompatActivity() {
             // User data is available, you can extract and display it
             displayUserData(userData)
         } else {
-            // If no user data, show a message and finish the activity
-            Toast.makeText(this, "Error: Login not successful", Toast.LENGTH_SHORT).show()
+
+
             finish()
         }
     }
@@ -34,7 +34,7 @@ class Agenda : AppCompatActivity() {
         //val numeroExpediente = userData.getString("NumeroExpediente", "")
         //val cedula = userData.getString("Cedula", "")
         val nombres = userData.getString("Nombres","")
-        // Extract other user data here...
+        val tipoUser = userData.getString("TipoUser", "")
 
         // Display the user data in the TextView
         // Add other user data to the string...S
