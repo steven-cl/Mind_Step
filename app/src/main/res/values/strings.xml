@@ -23,4 +23,13 @@
     <string name="usename_hint">ingrese el nombre de usuario</string>
     <string name="registrar">Registrar</string>
     <string name="fecha_hint">ingrese la fecha</string>
+    <string name="buscar_usuario">Buscar</string>
+    <string name="eliminar_usuario">Eliminar</string>
+    <string name="modificar">Modificar</string>
+    <string name="buscar_usuario_administrar">Buscar Usuario</string>
+    <string name="asignar_cita">Asignar Cita</string>
+    <string name="fichas">Fichas</string>
+    <string name="buscar_user">Buscar</string>
+    <string name="cambiar_contrasenia">Cambiar Contraseña</string>
+    <string name="ayuda">Ayuda</string>
 </resources>

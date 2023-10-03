@@ -132,7 +132,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="90dp"
                 android:orientation="horizontal">
 
                 <Space
@@ -142,7 +142,7 @@
                 <TextView
                     android:id="@+id/textExpediente"
                     android:layout_width="139dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="48dp"
                     android:background="@drawable/fondo_verde_claro"
                     android:fontFamily="@font/identidad_extra_bold"
                     android:gravity="center"
@@ -154,17 +154,30 @@
                     android:layout_width="35dp"
                     android:layout_height="wrap_content" />
 
-                <EditText
-                    android:id="@+id/ETExpediente"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutExpediente"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:gravity="center"
-                    android:hint="@string/Expediente_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="text" />
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textExpediente"
+                    app:layout_constraintTop_toTopOf="parent">
 
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETExpediente"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/fondo_verde_claro"
+
+                        android:gravity="center"
+                        android:hint="@string/Expediente_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
                 <Space
                     android:layout_width="20dp"
                     android:layout_height="wrap_content" />
@@ -177,7 +190,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="90dp"
                 android:orientation="horizontal">
 
                 <Space
@@ -187,7 +200,7 @@
                 <TextView
                     android:id="@+id/textCedula"
                     android:layout_width="139dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="48dp"
                     android:background="@drawable/fondo_verde_claro"
                     android:fontFamily="@font/identidad_extra_bold"
                     android:gravity="center"
@@ -199,17 +212,29 @@
                     android:layout_width="35dp"
                     android:layout_height="wrap_content" />
 
-                <EditText
-                    android:id="@+id/ETCedula"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutCedula"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:gravity="center"
-                    android:hint="@string/cedula_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="text" />
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textCedula"
+                    app:layout_constraintTop_toTopOf="parent">
 
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETCedula"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/fondo_verde_claro"
+                        android:gravity="center"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:hint="@string/cedula_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
                 <Space
                     android:layout_width="20dp"
                     android:layout_height="wrap_content" />
@@ -222,7 +247,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="90dp"
                 android:orientation="horizontal">
 
                 <Space
@@ -232,7 +257,7 @@
                 <TextView
                     android:id="@+id/textNombre"
                     android:layout_width="139dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="48dp"
                     android:background="@drawable/fondo_verde_claro"
                     android:fontFamily="@font/identidad_extra_bold"
                     android:gravity="center"
@@ -244,16 +269,32 @@
                     android:layout_width="35dp"
                     android:layout_height="wrap_content" />
 
-                <EditText
-                    android:id="@+id/ETNombres"
+                <!-- Cambia de EditText a TextInputLayout -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutNombre"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:gravity="center"
-                    android:hint="@string/nombres_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="text" />
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textNombre"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!-- EditText ahora está dentro de TextInputLayout -->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETNombres"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/fondo_verde_claro"
+                        android:gravity="center"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:hint="@string/nombres_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
 
                 <Space
                     android:layout_width="20dp"
@@ -267,7 +308,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="90dp"
                 android:orientation="horizontal">
 
                 <Space
@@ -277,7 +318,7 @@
                 <TextView
                     android:id="@+id/textApellidos"
                     android:layout_width="139dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="48dp"
                     android:background="@drawable/fondo_verde_claro"
                     android:fontFamily="@font/identidad_extra_bold"
                     android:gravity="center"
@@ -289,16 +330,29 @@
                     android:layout_width="35dp"
                     android:layout_height="wrap_content" />
 
-                <EditText
-                    android:id="@+id/ETApellidos"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutApellidos"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:gravity="center"
-                    android:hint="@string/Apellidos_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="text" />
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textApellidos"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETApellidos"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/fondo_verde_claro"
+                        android:gravity="center"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:hint="@string/Apellidos_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <Space
                     android:layout_width="20dp"
@@ -312,7 +366,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="90dp"
                 android:orientation="horizontal">
 
                 <Space
@@ -322,10 +376,11 @@
                 <TextView
                     android:id="@+id/textUser"
                     android:layout_width="139dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="48dp"
                     android:background="@drawable/fondo_verde_claro"
                     android:fontFamily="@font/identidad_extra_bold"
                     android:gravity="center"
+                    android:layout_marginTop="-10dp"
                     android:text="@string/username"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
@@ -334,16 +389,31 @@
                     android:layout_width="35dp"
                     android:layout_height="wrap_content" />
 
-                <EditText
-                    android:id="@+id/ETUser"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutUsuario"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:gravity="center"
-                    android:hint="@string/usename_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="text" />
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textUser"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/fondo_verde_claro"
+                        android:gravity="center"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:hint="@string/usename_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
 
                 <Space
                     android:layout_width="20dp"
@@ -357,7 +427,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="90dp"
                 android:orientation="horizontal">
 
                 <Space
@@ -367,7 +437,7 @@
                 <TextView
                     android:id="@+id/textCorreo"
                     android:layout_width="139dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="48dp"
                     android:background="@drawable/fondo_verde_claro"
                     android:fontFamily="@font/identidad_extra_bold"
                     android:gravity="center"
@@ -379,16 +449,29 @@
                     android:layout_width="35dp"
                     android:layout_height="wrap_content" />
 
-                <EditText
-                    android:id="@+id/ETCorreo"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutCorreo"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:gravity="center"
-                    android:hint="@string/correo_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textEmailAddress" />
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textCorreo"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETCorreo"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/fondo_verde_claro"
+                        android:gravity="center"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:hint="@string/correo_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <Space
                     android:layout_width="20dp"
@@ -402,7 +485,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="90dp"
                 android:orientation="horizontal">
 
                 <Space
@@ -412,7 +495,7 @@
                 <TextView
                     android:id="@+id/textContraseña"
                     android:layout_width="139dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="48dp"
                     android:background="@drawable/fondo_verde_claro"
                     android:fontFamily="@font/identidad_extra_bold"
                     android:gravity="center"
@@ -424,16 +507,29 @@
                     android:layout_width="35dp"
                     android:layout_height="wrap_content" />
 
-                <EditText
-                    android:id="@+id/ETContraseña"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutContraseña"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:gravity="center"
-                    android:hint="@string/contrasña_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textVisiblePassword" />
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textContraseña"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETContraseña"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/fondo_verde_claro"
+                        android:gravity="center"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:hint="@string/contrasña_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="textVisiblePassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <Space
                     android:layout_width="20dp"
@@ -447,7 +543,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="90dp"
                 android:orientation="horizontal">
 
                 <Space
@@ -457,9 +553,10 @@
                 <TextView
                     android:id="@+id/textFecha"
                     android:layout_width="139dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="48dp"
                     android:background="@drawable/fondo_verde_claro"
                     android:fontFamily="@font/identidad_extra_bold"
+                    android:layout_marginTop="-10dp"
                     android:gravity="center"
                     android:text="@string/Fecha"
                     android:textColor="@color/black"
@@ -469,16 +566,29 @@
                     android:layout_width="35dp"
                     android:layout_height="wrap_content" />
 
-                <EditText
-                    android:id="@+id/ETFechaNac"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayoutFechaNac"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:background="@drawable/fondo_verde_claro"
-                    android:gravity="center"
-                    android:hint="@string/fecha_hint"
-                    android:importantForAutofill="no"
-                    android:inputType="date" />
+                    app:errorEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/textFecha"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETFechaNac"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/fondo_verde_claro"
+                        android:gravity="center"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:hint="@string/fecha_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="date" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <Space
                     android:layout_width="20dp"
@@ -519,6 +629,7 @@
                     android:id="@+id/RolesUsuarios"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/black"
                     android:layout_weight="1"
                     android:background="@drawable/fondo_verde_claro"
                     android:gravity="center"

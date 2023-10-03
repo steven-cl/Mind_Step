@@ -113,4 +113,135 @@
         app:srcCompat="@drawable/logo_icono"
         tools:ignore="ContentDescription" />
 
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/fondo_verde_claro"
+        android:text="@string/buscar_user"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/perfil_clickable" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:textColor="@color/black"
+        android:background="@drawable/fondo_verde_claro"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topsombra"
+        android:autofillHints="Buscar"
+        android:hint="@string/buscar_user"
+        android:inputType="text" />
+
+    <GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:columnOrderPreserved="false"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText">
+
+        <!-- Elemento 1 -->
+        <Button
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:textColor="@color/black"
+            android:background="@drawable/button_border"
+            android:text="Nombre" />
+
+        <!-- Elemento 2 -->
+        <Button
+            android:layout_row="0"
+            android:layout_column="1"
+            android:textColor="@color/black"
+            android:layout_gravity="fill"
+            android:background="@drawable/button_border"
+            android:text="Apellido" />
+
+        <!-- Elemento 3 -->
+        <Button
+            android:layout_row="0"
+            android:layout_column="2"
+            android:textColor="@color/black"
+            android:layout_gravity="fill"
+            android:background="@drawable/button_border"
+            android:text="Elemento 3" />
+
+        <!-- Elemento 4 -->
+        <Button
+            android:layout_row="1"
+            android:layout_column="0"
+            android:textColor="@color/black"
+            android:layout_gravity="fill"
+            android:background="@drawable/button_border"
+            android:text="Elemento 4" />
+
+        <!-- Elemento 5 -->
+        <Button
+            android:layout_row="1"
+            android:layout_column="1"
+            android:textColor="@color/black"
+            android:layout_gravity="fill"
+            android:background="@drawable/button_border"
+            android:text="Elemento 5" />
+
+        <!-- Elemento 6 -->
+        <Button
+            android:layout_row="1"
+            android:layout_column="2"
+            android:textColor="@color/black"
+            android:layout_gravity="fill"
+            android:background="@drawable/button_border"
+            android:text="Elemento 6" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnFichas"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/fondo_verde_claro"
+        android:text="@string/fichas"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout2" />
+
+
+    <Button
+        android:id="@+id/btnAsignarCita"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/fondo_verde_claro"
+        android:text="@string/asignar_cita"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFichas" />
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
