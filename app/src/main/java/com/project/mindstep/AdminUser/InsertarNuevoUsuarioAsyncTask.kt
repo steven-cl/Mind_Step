@@ -1,15 +1,17 @@
+@file:Suppress("DEPRECATION")
+
 package com.project.mindstep.AdminUser
 
+import android.annotation.SuppressLint
 import android.os.AsyncTask
 import android.util.Log
-import android.widget.Toast
 import com.project.mindstep.DataBaseConnection
 import java.sql.Connection
 import java.sql.PreparedStatement
 import java.text.SimpleDateFormat
 import java.util.*
 
-class InsertarNuevoUsuarioAsyncTask(private val context: NuevoUsuario) :
+class InsertarNuevoUsuarioAsyncTask(private @field:SuppressLint("StaticFieldLeak") val context: NuevoUsuario) :
     AsyncTask<String, Void, Boolean>() {
 
     @Deprecated("Deprecated in Java")
@@ -94,7 +96,7 @@ class InsertarNuevoUsuarioAsyncTask(private val context: NuevoUsuario) :
         val fechaNacimientoDate = formato.parse(fechaNacimiento)
         val fechaActual = Calendar.getInstance().time
 
-        val diff = fechaActual.time - fechaNacimientoDate.time
+        val diff = fechaActual.time - fechaNacimientoDate!!.time
         val edadMillis = diff / (24 * 60 * 60 * 1000 * 365.25) // Milliseconds to years
         return edadMillis.toInt()
     }

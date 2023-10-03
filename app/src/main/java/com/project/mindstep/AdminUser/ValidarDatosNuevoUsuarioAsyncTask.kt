@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.project.mindstep.AdminUser
 
 import android.os.AsyncTask
@@ -15,6 +17,7 @@ class ValidarDatosNuevoUsuarioAsyncTask(
         fun onValidationResult(result: Boolean)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun doInBackground(vararg params: String): Boolean {
         val numeroExpediente = params[0]
         val numeroCedula = params[1]
@@ -80,6 +83,7 @@ class ValidarDatosNuevoUsuarioAsyncTask(
         return false
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onPostExecute(result: Boolean) {
         super.onPostExecute(result)
         listener.onValidationResult(result)
