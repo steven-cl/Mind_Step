@@ -238,10 +238,6 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         }
         return true
     }
-<<<<<<< HEAD
-}
-=======
-
 
     private fun navigateToAjusteActivity() {
         val intent = Intent(this, AjustesAdmin::class.java)
@@ -263,4 +259,3 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         startActivity(intent)
     }
 }
->>>>>>> 3c2ad8c4ddd6356c2c98806ce7d7946b278ca285
