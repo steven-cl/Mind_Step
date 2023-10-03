@@ -24,5 +24,6 @@ class MainActivity : AppCompatActivity() {
         //por ahora para ver los resultados visuales me redirigira automaticamente a la agenda del paciente
         val intent = Intent(this, Login::class.java)
         startActivity(intent)
+        finish()
     }
 }
