@@ -225,8 +225,6 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
             Toast.makeText(this, "Selecciona un rol válido", Toast.LENGTH_SHORT).show()
             return false
         }
-
-
         return true
     }
 }
