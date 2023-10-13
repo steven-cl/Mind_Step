@@ -3,14 +3,15 @@ package com.project.mindstep.AdminUser
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.ImageView
-import com.project.mindstep.Paciente.Agenda
-import com.project.mindstep.Paciente.AjustesPaciente
-import com.project.mindstep.Paciente.Estado
-import com.project.mindstep.Paciente.Test
+import android.widget.Spinner
+
 import com.project.mindstep.R
 
 class AdministrarUsuarios : AppCompatActivity() {
+
+    private lateinit var tipoCuenta : Spinner
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_administrar_usuarios)
@@ -25,6 +26,10 @@ class AdministrarUsuarios : AppCompatActivity() {
         registroImagen.setOnClickListener { navigateToRegistroActivity() }
         administradorImagen.setOnClickListener { navigateToAdministradorActivity() }
         citasImagen.setOnClickListener { navigateToCitasActivity() }
+
+        val roles = listOf("Paciente", "Medico", "Gestor de usuario", "Creador de Test")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, roles)
+        tipoCuenta.adapter = adapter
 
     }
 

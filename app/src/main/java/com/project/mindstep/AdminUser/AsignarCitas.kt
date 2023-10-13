@@ -1,5 +1,6 @@
 package com.project.mindstep.AdminUser
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,10 +8,12 @@ import android.widget.ImageView
 import com.project.mindstep.R
 
 class AsignarCitas : AppCompatActivity() {
+
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_asignar_citas)
-
 
         val ajusteImagen: ImageView = findViewById(R.id.ajuste_imagen)
         val registroImagen: ImageView = findViewById(R.id.regitro_imagen)
@@ -23,7 +26,6 @@ class AsignarCitas : AppCompatActivity() {
         citasImagen.setOnClickListener { navigateToCitasActivity() }
 
     }
-
 
     private fun navigateToAjusteActivity() {
         val intent = Intent(this, AjustesAdmin::class.java)

@@ -113,133 +113,6 @@
         app:srcCompat="@drawable/logo_icono"
         tools:ignore="ContentDescription" />
 
-
-    <Button
-        android:id="@+id/btnBuscar"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="@string/buscar_user"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/perfil_clickable" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="36dp"
-        android:textColor="@color/black"
-        android:background="@drawable/fondo_verde_claro"
-        app:layout_constraintEnd_toStartOf="@+id/btnBuscar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topsombra"
-        android:autofillHints="Buscar"
-        android:hint="@string/buscar_user"
-        android:inputType="text" />
-
-    <GridLayout
-        android:id="@+id/gridLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="40dp"
-        android:alignmentMode="alignMargins"
-        android:columnCount="3"
-        android:columnOrderPreserved="false"
-        android:rowCount="2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText">
-
-        <!-- Elemento 1 -->
-        <Button
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_gravity="fill"
-            android:textColor="@color/black"
-            android:background="@drawable/button_border"
-            android:text="Nombre" />
-
-        <!-- Elemento 2 -->
-        <Button
-            android:layout_row="0"
-            android:layout_column="1"
-            android:textColor="@color/black"
-            android:layout_gravity="fill"
-            android:background="@drawable/button_border"
-            android:text="Apellido" />
-
-        <!-- Elemento 3 -->
-        <Button
-            android:layout_row="0"
-            android:layout_column="2"
-            android:textColor="@color/black"
-            android:layout_gravity="fill"
-            android:background="@drawable/button_border"
-            android:text="Elemento 3" />
-
-        <!-- Elemento 4 -->
-        <Button
-            android:layout_row="1"
-            android:layout_column="0"
-            android:textColor="@color/black"
-            android:layout_gravity="fill"
-            android:background="@drawable/button_border"
-            android:text="Elemento 4" />
-
-        <!-- Elemento 5 -->
-        <Button
-            android:layout_row="1"
-            android:layout_column="1"
-            android:textColor="@color/black"
-            android:layout_gravity="fill"
-            android:background="@drawable/button_border"
-            android:text="Elemento 5" />
-
-        <!-- Elemento 6 -->
-        <Button
-            android:layout_row="1"
-            android:layout_column="2"
-            android:textColor="@color/black"
-            android:layout_gravity="fill"
-            android:background="@drawable/button_border"
-            android:text="Elemento 6" />
-
-    </GridLayout>
-
-    <Button
-        android:id="@+id/btnFichas"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="@string/fichas"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout2" />
-
-
-    <Button
-        android:id="@+id/btnAsignarCita"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="@string/asignar_cita"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFichas" />
-
     <View
         android:id="@+id/view7"
         android:layout_width="1.5dp"
@@ -355,5 +228,196 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottompanel"
         app:layout_constraintVertical_bias="0.526" />
+
+    <!--Contenido dentro del layout fuera de la topbar y la bottombar -->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottompanel"
+        app:layout_constraintTop_toBottomOf="@+id/topsombra"
+        tools:ignore="MissingConstraints,ScrollViewCount"
+        tools:layout_editor_absoluteX="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="35dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:textColor="@color/black"
+                android:hint="@string/buscar_usuario_administrar"
+                android:background="@drawable/fondo_verde_claro"
+                android:autofillHints="buscar"
+                android:inputType="text"
+                android:gravity="center"/>
+
+
+            <Space
+                android:layout_width="35dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnBuscar"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:background="@drawable/fondo_verde_claro"
+                android:text="@string/buscar_usuario"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="3dp"
+                android:layout_height="wrap_content" />
+
+            <GridLayout
+                android:id="@+id/gridLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="3"
+                android:columnOrderPreserved="false"
+                android:rowCount="2"
+                >
+
+                <!-- Elemento 1 -->
+                <Button
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_border"
+                    android:text="Nombre" />
+
+                <!-- Elemento 2 -->
+                <Button
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_border"
+                    android:text="Apellido" />
+
+                <!-- Elemento 3 -->
+                <Button
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_border"
+                    android:text="Elemento 3" />
+
+                <!-- Elemento 4 -->
+                <Button
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_border"
+                    android:text="Elemento 4" />
+
+                <!-- Elemento 5 -->
+                <Button
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_border"
+                    android:text="Elemento 5" />
+
+                <!-- Elemento 6 -->
+                <Button
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:textColor="@color/black"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/button_border"
+                    android:text="Elemento 6" />
+
+            </GridLayout>
+
+            <Space
+                android:layout_width="3dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:orientation="horizontal"
+            android:id="@+id/LinearCalendarView">
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="match_parent"/>
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="313dp"
+                android:layout_height="313dp"
+                android:background="@drawable/fondo_verde_claro"
+               />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnAsignarCita"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:background="@drawable/fondo_verde_claro"
+                android:text="@string/asignar_cita"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
