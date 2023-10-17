@@ -78,17 +78,17 @@ class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
 
         //me dan todos, me
         //ahi esta verifica que los activities esten correctos ya se con un texto
-        if(result == "Paciente"){
+        if(result == "4"){
             // Authentication successful, navigate to the Agenda activity
             startActivity(Intent(this, Agenda::class.java))
             finish() // finish the current activity to prevent going back to the login screen
-        }else if (result == "Medico"){
+        }else if (result == "2"){
             startActivity(Intent(this, Resultados::class.java))
             finish()
-        }else if (result == "Gestor de usuario"){
+        }else if (result == "1"){
             startActivity(Intent(this, NuevoUsuario::class.java))
             finish()
-        }else if (result == "Creador de Test"){
+        }else if (result == "3"){
             startActivity(Intent(this, CrearTest::class.java))
             finish()
         }
