@@ -36,50 +36,46 @@ class FetchUsuariosAsyncTask(private @field:SuppressLint("StaticFieldLeak") val 
             if (connection != null) {
                 statement = connection.createStatement()
                 resultSet = statement.executeQuery(
-                    "SELECT [NumeroExpediente], [Cedula], [Nombres], [Apellidos], [Edad], [DiaNacimiento], " +
-                            "[MesNacimiento], [AñoNacimiento], [TipoUser], [Correo], [Usuario], [Contraseña] FROM [dbo].[Usuarios]"
+                    "SELECT [IdUsuarios],[IdRol],[Usuario],[Contraseña],[Correo],[Cedula],[Nombres],[Apellidos],[FechaNac]" +
+                            "  FROM [dbo].[Usuarios]"
                 )
 
                 while (resultSet.next()) {
-                    val numeroExpediente = resultSet.getString("NumeroExpediente")
+                    val idUsuarios = resultSet.getString("IdUsuarios")
+                    val idRol = resultSet.getString("IdRol")
+                    val usuario = resultSet.getString("Usuario")
+                    val contrasenia = resultSet.getString("Contraseña")
+                    val correo = resultSet.getString("Correo")
                     val cedula = resultSet.getString("Cedula")
                     val nombres = resultSet.getString("Nombres")
                     val apellidos = resultSet.getString("Apellidos")
-                    val edad = resultSet.getString("Edad")
-                    val diaNacimiento = resultSet.getString("DiaNacimiento")
-                    val mesNacimiento = resultSet.getString("MesNacimiento")
-                    val yearNacimiento = resultSet.getString("AñoNacimiento")
-                    val tipoUser = resultSet.getString("TipoUser")
-                    val correo = resultSet.getString("Correo")
-                    val usuario = resultSet.getString("Usuario")
-                    val contrasenia = resultSet.getString("Contraseña")
+                    val fechaNac = resultSet.getString("FechaNac")
 
-                    if (correo == email && contrasenia == password) {
+
+                    if ((correo == email && contrasenia == password) || (email == usuario && contrasenia == password)) {
                         // Authentication successful
                         val userData = Bundle().apply {
-                            putString("NumeroExpediente", numeroExpediente)
+                            putString("IdUsuarios", idUsuarios)
+                            putString("IdRol", idRol)
+                            putString("Usuario", usuario)
+                            putString("Contraseña", contrasenia)
+                            putString("Correo", correo)
                             putString("Cedula", cedula)
                             putString("Nombres", nombres)
                             putString("Apellidos", apellidos)
-                            putString("Edad", edad)
-                            putString("DiaNacimiento", diaNacimiento)
-                            putString("MesNacimiento", mesNacimiento)
-                            putString("AñoNacimiento", yearNacimiento)
-                            putString("TipoUser", tipoUser)
-                            putString("Correo", correo)
-                            putString("Usuario", usuario)
-                            putString("Contraseña", contrasenia)
+                            putString("FechaNac", fechaNac)
+
                             // Add other user data here...
                         }
 
-                        if (userData.getString("TipoUser", "") == "Paciente"){
-                            result="Paciente"
-                        }else if(userData.getString("TipoUser", "") == "Medico"){
-                            result = "Medico"
-                        }else if(userData.getString("TipoUser", "") == "Gestor de usuario"){
-                            result = "Gestor de usuario"
-                        }else if(userData.getString("TipoUser", "") == "Creador de Test"){
-                            result = "Creador de Test"
+                        if (userData.getString("IdRol", "") == "4"){
+                            result="4"
+                        }else if(userData.getString("IdRol", "") == "2"){
+                            result = "2"
+                        }else if(userData.getString("IdRol", "") == "1"){
+                            result = "1"
+                        }else if(userData.getString("IdRol", "") == "3"){
+                            result = "3"
                         }
                     }/* else {
                         Toast.makeText(context, "Correo o contraseña invalidos", Toast.LENGTH_SHORT).show()
