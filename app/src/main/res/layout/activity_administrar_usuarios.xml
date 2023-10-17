@@ -113,66 +113,6 @@
         app:srcCompat="@drawable/logo_icono"
         tools:ignore="ContentDescription" />
 
-
-
-
-    <Button
-        android:id="@+id/btnBuscar"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="@string/buscar_usuario"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/perfil_clickable" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="36dp"
-        android:textColor="@color/black"
-        android:hint="@string/buscar_usuario_administrar"
-        android:background="@drawable/fondo_verde_claro"
-        app:layout_constraintEnd_toStartOf="@+id/btnBuscar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topsombra"
-        android:autofillHints="buscar"
-        android:inputType="text"
-        android:gravity="center"/>
-
-
-    <Button
-        android:id="@+id/btnModificar"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="@string/modificar"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
-
-    <Button
-        android:id="@+id/btnEliminar"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="@string/eliminar_usuario"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/bottomsombra"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnModificar" />
-
     <View
         android:id="@+id/view7"
         android:layout_width="1.5dp"
@@ -289,237 +229,348 @@
         app:layout_constraintTop_toTopOf="@+id/bottompanel"
         app:layout_constraintVertical_bias="0.526" />
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="337dp"
-        android:layout_height="258dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBuscar"
-        android:background="@drawable/fondo_verde_claro">
+    <!-- Views en medio, fuera de la topbar y la bottombar-->
 
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="337dp"
-            android:layout_height="258dp">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottompanel"
+        app:layout_constraintTop_toBottomOf="@+id/topsombra"
+        tools:ignore="MissingConstraints,ScrollViewCount"
+        tools:layout_editor_absoluteX="1dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="200dp"
+                    android:layout_height="48dp"
+                    android:textColor="@color/black"
+                    android:hint="@string/buscar_usuario_administrar"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:autofillHints="buscar"
+                    android:inputType="text"
+                    android:gravity="center"/>
 
 
-            <androidx.appcompat.widget.LinearLayoutCompat
+                <Space
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnBuscar"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:text="@string/buscar_usuario"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <Space
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:orientation="horizontal">
 
                 <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="10dp"/>
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"/>
 
-                <TableRow
-                    android:layout_height="48dp"
-                    android:layout_width="wrap_content">
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="350dp"
+                    android:layout_height="445dp"
+                    android:background="@drawable/fondo_verde_claro">
 
                     <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content"/>
-
-                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Expediente" />
+                        android:layout_height="10dp"/>
 
-                    <EditText
-                        android:id="@+id/etExpediente"
-                        android:layout_width="220dp"
-                        android:layout_height="48dp"
-                        android:importantForAccessibility="no"
-                        android:importantForAutofill="no"
-                        android:inputType="text" />
-                </TableRow>
+                    <TableRow
+                        android:layout_width="288dp"
+                        android:layout_height="48dp">
 
-                <TableRow
-                    android:layout_height="48dp"
-                    android:layout_width="wrap_content">
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
 
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_width="93dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Expediente"
+                            android:textSize="16sp" />
 
-                    <TextView
+                        <EditText
+                            android:id="@+id/etExpediente"
+                            android:layout_width="180dp"
+                            android:layout_height="48dp"
+                            android:importantForAccessibility="no"
+                            android:importantForAutofill="no"
+                            android:inputType="text" />
+
+                    </TableRow>
+
+                    <TableRow
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/cedula" />
+                        android:layout_height="48dp">
 
-                    <EditText
-                        android:id="@+id/etCedula"
-                        android:layout_width="246dp"
-                        android:layout_height="48dp"
-                        android:importantForAccessibility="no"
-                        android:importantForAutofill="no"
-                        android:inputType="text" />
-                </TableRow>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
 
-                <TableRow
-                    android:layout_height="48dp"
-                    android:layout_width="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cedula"
+                            android:textSize="16sp" />
 
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content"/>
+                        <EditText
+                            android:id="@+id/etCedula"
+                            android:layout_width="180dp"
+                            android:layout_height="48dp"
+                            android:importantForAccessibility="no"
+                            android:importantForAutofill="no"
+                            android:inputType="text" />
+                    </TableRow>
 
-                    <TextView
+                    <TableRow
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/nombres" />
+                        android:layout_height="48dp">
 
-                    <EditText
-                        android:id="@+id/etNombres"
-                        android:layout_width="250dp"
-                        android:layout_height="48dp"
-                        android:importantForAccessibility="no"
-                        android:importantForAutofill="no"
-                        android:inputType="text" />
-                </TableRow>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
 
-                <TableRow
-                    android:layout_height="48dp"
-                    android:layout_width="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/nombres"
+                            android:textSize="16sp" />
 
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content"/>
+                        <EditText
+                            android:id="@+id/etNombres"
+                            android:layout_width="180dp"
+                            android:layout_height="48dp"
+                            android:importantForAccessibility="no"
+                            android:importantForAutofill="no"
+                            android:inputType="text" />
+                    </TableRow>
 
-                    <TextView
+                    <TableRow
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Apellidos" />
+                        android:layout_height="48dp">
 
-                    <EditText
-                        android:id="@+id/etApellidos"
-                        android:layout_width="250dp"
-                        android:layout_height="48dp"
-                        android:importantForAccessibility="no"
-                        android:importantForAutofill="no"
-                        android:inputType="text" />
-                </TableRow>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
 
-                <TableRow
-                    android:layout_height="48dp"
-                    android:layout_width="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Apellidos"
+                            android:textSize="16sp" />
 
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content"/>
+                        <EditText
+                            android:id="@+id/etApellidos"
+                            android:layout_width="180dp"
+                            android:layout_height="48dp"
+                            android:importantForAccessibility="no"
+                            android:importantForAutofill="no"
+                            android:inputType="text" />
+                    </TableRow>
 
-                    <TextView
+                    <TableRow
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Fecha" />
+                        android:layout_height="48dp">
 
-                    <EditText
-                        android:id="@+id/etFechaNac"
-                        android:layout_width="176dp"
-                        android:layout_height="48dp"
-                        android:importantForAccessibility="no"
-                        android:importantForAutofill="no"
-                        android:inputType="date" />
-                </TableRow>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
 
-                <TableRow
-                    android:layout_height="48dp"
-                    android:layout_width="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/FechaNac"
+                            android:textSize="16sp" />
 
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content"/>
+                        <EditText
+                            android:id="@+id/etFechaNac"
+                            android:layout_width="180dp"
+                            android:layout_height="48dp"
+                            android:importantForAccessibility="no"
+                            android:importantForAutofill="no"
+                            android:inputType="date" />
+                    </TableRow>
 
-                    <TextView
+                    <TableRow
+                        android:layout_width="278dp"
+                        android:layout_height="48dp">
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tipo_de_cuenta"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/espTipo"
+                            android:layout_width="180dp"
+                            android:layout_height="48dp" />
+                    </TableRow>
+
+                    <TableRow
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tipo_de_cuenta" />
+                        android:layout_height="48dp">
 
-                    <Space
-                        android:layout_width="20dp"
-                        android:layout_height="wrap_content"/>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
 
-                    <Spinner
-                        android:id="@+id/textTipo"
-                        android:layout_width="200dp"
-                        android:layout_height="48dp" />
-                </TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/username"
+                            android:textSize="16sp" />
 
-                <TableRow
-                    android:layout_height="48dp"
-                    android:layout_width="wrap_content">
+                        <EditText
+                            android:id="@+id/etUsuario"
+                            android:layout_width="180dp"
+                            android:layout_height="48dp"
+                            android:importantForAccessibility="no"
+                            android:importantForAutofill="no"
+                            android:inputType="text" />
+                    </TableRow>
 
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content"/>
-
-                    <TextView
+                    <TableRow
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/username" />
+                        android:layout_height="48dp">
 
-                    <EditText
-                        android:id="@+id/etUsuario"
-                        android:layout_width="188dp"
-                        android:layout_height="48dp"
-                        android:importantForAccessibility="no"
-                        android:importantForAutofill="no"
-                        android:inputType="text" />
-                </TableRow>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
 
-                <TableRow
-                    android:layout_height="48dp"
-                    android:layout_width="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/correo"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/etCorreo"
+                            android:layout_width="180dp"
+                            android:layout_height="48dp"
+                            android:importantForAccessibility="no"
+                            android:importantForAutofill="no"
+                            android:inputType="textEmailAddress" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp">
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contraseña_"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/etContraseña"
+                            android:layout_width="180dp"
+                            android:layout_height="48dp"
+                            android:importantForAccessibility="no"
+                            android:importantForAutofill="no"
+                            android:inputType="textPassword" />
+                    </TableRow>
 
                     <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content"/>
-
-                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/correo" />
+                        android:layout_height="10dp" />
 
-                    <EditText
-                        android:id="@+id/etCorreo"
-                        android:layout_width="268dp"
-                        android:layout_height="48dp"
-                        android:importantForAccessibility="no"
-                        android:importantForAutofill="no"
-                        android:inputType="textEmailAddress" />
-                </TableRow>
+                </TableLayout>
+            </LinearLayout>
 
-                <TableRow
-                    android:layout_height="48dp"
-                    android:layout_width="wrap_content">
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
 
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="wrap_content"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/contraseña_" />
-
-
-                    <EditText
-                        android:id="@+id/etContraseña"
-                        android:layout_width="243dp"
-                        android:layout_height="48dp"
-                        android:importantForAccessibility="no"
-                        android:importantForAutofill="no"
-                        android:inputType="textPassword" />
-                </TableRow>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
 
                 <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="10dp"/>
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"/>
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
-        </androidx.core.widget.NestedScrollView>
-    </TableLayout>
+                <Button
+                    android:id="@+id/btnModificar"
+                    android:layout_width="200dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:text="@string/modificar"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Space
+                android:layout_width="100dp"
+                android:layout_height="match_parent"/>
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    android:layout_width="200dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/fondo_verde_claro"
+                    android:text="@string/eliminar_usuario"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

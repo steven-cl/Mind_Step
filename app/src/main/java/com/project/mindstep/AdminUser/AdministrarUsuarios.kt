@@ -1,5 +1,6 @@
 package com.project.mindstep.AdminUser
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,12 +12,14 @@ import com.project.mindstep.R
 
 class AdministrarUsuarios : AppCompatActivity() {
 
-    private lateinit var tipoCuenta : Spinner
+    private lateinit var tipoDeCuenta : Spinner
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_administrar_usuarios)
 
-
+        tipoDeCuenta = findViewById(R.id.espTipo)
         val ajusteImagen: ImageView = findViewById(R.id.ajuste_imagen)
         val registroImagen: ImageView = findViewById(R.id.regitro_imagen)
         val administradorImagen: ImageView = findViewById(R.id.administrador_imagen)
@@ -28,8 +31,8 @@ class AdministrarUsuarios : AppCompatActivity() {
         citasImagen.setOnClickListener { navigateToCitasActivity() }
 
         val roles = listOf("Paciente", "Medico", "Gestor de usuario", "Creador de Test")
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, roles)
-        tipoCuenta.adapter = adapter
+        val adaptador = ArrayAdapter(this, android.R.layout.simple_spinner_item, roles)
+        tipoDeCuenta.adapter = adaptador
 
     }
 

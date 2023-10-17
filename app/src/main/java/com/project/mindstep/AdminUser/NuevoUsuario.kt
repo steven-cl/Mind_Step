@@ -1,5 +1,6 @@
 package com.project.mindstep.AdminUser
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.*
@@ -24,6 +25,7 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
     private lateinit var tipoCuenta: Spinner
     private lateinit var registrarButton: Button
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nuevo_usuario)

@@ -199,10 +199,6 @@
 
             </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="35dp" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
@@ -239,10 +235,6 @@
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="35dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -285,10 +277,6 @@
 
             </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="35dp" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
@@ -326,10 +314,6 @@
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="35dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -371,10 +355,6 @@
 
             </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="35dp" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
@@ -412,10 +392,6 @@
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="35dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -455,10 +431,6 @@
 
             </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="35dp" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
@@ -497,11 +469,6 @@
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
-
-            <Space
-                android:id="@+id/spaceCalendario"
-                android:layout_width="match_parent"
-                android:layout_height="35dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

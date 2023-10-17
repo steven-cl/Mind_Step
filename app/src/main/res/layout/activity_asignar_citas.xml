@@ -288,86 +288,128 @@
             android:layout_width="match_parent"
             android:layout_height="50dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:orientation="horizontal">
-
-            <Space
-                android:layout_width="3dp"
-                android:layout_height="wrap_content" />
-
-            <GridLayout
-                android:id="@+id/gridLayout2"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alignmentMode="alignMargins"
-                android:columnCount="3"
-                android:columnOrderPreserved="false"
-                android:rowCount="2"
-                >
+                android:layout_height="214dp"
+                android:orientation="horizontal">
 
-                <!-- Elemento 1 -->
-                <Button
-                    android:layout_row="0"
-                    android:layout_column="0"
-                    android:layout_gravity="fill"
-                    android:textColor="@color/black"
-                    android:background="@drawable/button_border"
-                    android:text="Nombre" />
+                <Space
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
 
-                <!-- Elemento 2 -->
-                <Button
-                    android:layout_row="0"
-                    android:layout_column="1"
-                    android:textColor="@color/black"
-                    android:layout_gravity="fill"
-                    android:background="@drawable/button_border"
-                    android:text="Apellido" />
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="350dp"
+                    android:layout_height="210dp"
+                    android:background="@drawable/fondo_verde_claro">
 
-                <!-- Elemento 3 -->
-                <Button
-                    android:layout_row="0"
-                    android:layout_column="2"
-                    android:textColor="@color/black"
-                    android:layout_gravity="fill"
-                    android:background="@drawable/button_border"
-                    android:text="Elemento 3" />
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp" />
 
-                <!-- Elemento 4 -->
-                <Button
-                    android:layout_row="1"
-                    android:layout_column="0"
-                    android:textColor="@color/black"
-                    android:layout_gravity="fill"
-                    android:background="@drawable/button_border"
-                    android:text="Elemento 4" />
+                    <TableRow
+                        android:layout_width="288dp"
+                        android:layout_height="48dp">
 
-                <!-- Elemento 5 -->
-                <Button
-                    android:layout_row="1"
-                    android:layout_column="1"
-                    android:textColor="@color/black"
-                    android:layout_gravity="fill"
-                    android:background="@drawable/button_border"
-                    android:text="Elemento 5" />
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
 
-                <!-- Elemento 6 -->
-                <Button
-                    android:layout_row="1"
-                    android:layout_column="2"
-                    android:textColor="@color/black"
-                    android:layout_gravity="fill"
-                    android:background="@drawable/button_border"
-                    android:text="Elemento 6" />
+                        <TextView
+                            android:layout_width="114dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Expediente"
+                            android:textSize="16sp" />
 
-            </GridLayout>
+                        <TextView
+                            android:id="@+id/txtExpediente"
+                            android:layout_width="215dp"
+                            android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
 
-            <Space
-                android:layout_width="3dp"
-                android:layout_height="wrap_content" />
+                    </TableRow>
 
-        </LinearLayout>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp">
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cedula"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtCedula"
+                            android:layout_width="215dp"
+                            android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp">
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/nombres"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtNombres"
+                            android:layout_width="215dp"
+                            android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp">
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Apellidos"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtApellidos"
+                            android:layout_width="215dp"
+                            android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            />
+                    </TableRow>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp" />
+
+                </TableLayout>
+
+                <Space
+                    android:layout_width="3dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
 
             <Space
                 android:layout_width="match_parent"
