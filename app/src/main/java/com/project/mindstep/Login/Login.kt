@@ -1,19 +1,19 @@
 package com.project.mindstep.Login
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.project.mindstep.R
 import android.content.Intent
+import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.project.mindstep.AdminUser.NuevoUsuario
 import com.project.mindstep.FetchUsuariosAsyncTask
 import com.project.mindstep.Medico.Resultados
 import com.project.mindstep.Paciente.Agenda
+import com.project.mindstep.R
 import com.project.mindstep.TestCreator.CrearTest
 
 class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
@@ -76,21 +76,18 @@ class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
             Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
         }
 
-        //me dan todos, me
-        //ahi esta verifica que los activities esten correctos ya se con un texto
+        //navegacion a la activity indicada
         if(result == "4"){
             // Authentication successful, navigate to the Agenda activity
             startActivity(Intent(this, Agenda::class.java))
-            finish() // finish the current activity to prevent going back to the login screen
         }else if (result == "2"){
             startActivity(Intent(this, Resultados::class.java))
-            finish()
         }else if (result == "1"){
             startActivity(Intent(this, NuevoUsuario::class.java))
-            finish()
         }else if (result == "3"){
             startActivity(Intent(this, CrearTest::class.java))
-            finish()
         }
+        //finalizar esta actividad, para que no se pueda volver al login
+        finish()
     }
 }

@@ -61,29 +61,24 @@
         tools:ignore="MissingConstraints"
         tools:targetApi="p" />
 
-    <View
-        android:id="@+id/perfil_clickable"
-        android:layout_width="85dp"
-        android:layout_height="79dp"
-        android:layout_above="@id/perfil"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,MissingContraints" />
-
     <ImageView
         android:id="@+id/perfil"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="9dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:importantForAccessibility="no"
-        app:layout_constraintBottom_toBottomOf="@+id/perfil_clickable"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/perfil_clickable"
+        app:layout_constraintEnd_toEndOf="@+id/toppanel"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/usuario" />
+
+    <Spinner
+        android:id="@+id/perfil_clickable"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@id/perfil"
+        app:layout_constraintEnd_toEndOf="@+id/toppanel"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textLogo"
