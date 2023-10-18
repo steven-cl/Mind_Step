@@ -11,7 +11,6 @@ class AdministrarTest : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_administrar_test)
 
-
         val ajusteImagen: ImageView = findViewById(R.id.ajuste_imagen)
         val graficaImagen: ImageView = findViewById(R.id.grafica_imagen)
         val calendarioImagen: ImageView = findViewById(R.id.calendario_imagen)

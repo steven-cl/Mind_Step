@@ -13,7 +13,7 @@
     <string name="nombres_hint">Ingrese los nombres</string>
     <string name="Apellidos">Apellidos: </string>
     <string name="Apellidos_hint">ingrese los apellidos</string>
-    <string name="Fecha">Fecha de Nacimiento: </string>
+    <string name="FechaNac">Fecha de Nacimiento: </string>
     <string name="correo">Correo: </string>
     <string name="correo_hint">ingrese el correo</string>
     <string name="contraseña_">Contraseña: </string>
@@ -28,9 +28,12 @@
     <string name="modificar">Modificar</string>
     <string name="buscar_usuario_administrar">Buscar Usuario</string>
     <string name="asignar_cita">Asignar Cita</string>
-    <string name="fichas">Fichas</string>
+    <string name="fechas">Fecha</string>
     <string name="buscar_user">Buscar</string>
     <string name="cambiar_contrasenia">Cambiar Contraseña</string>
     <string name="ayuda">Ayuda</string>
     <string name="cambiar_nombre">Cambiar nombre</string>
+    <string name="proxima_cita">Próxima cita:</string>
+    <string name="Fecha">Fecha:</string>
+    <string name="Hora">Hora:</string>
 </resources>

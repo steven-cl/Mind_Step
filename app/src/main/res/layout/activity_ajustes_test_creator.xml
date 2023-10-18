@@ -89,28 +89,30 @@
         app:srcCompat="@drawable/logo_icono"
         tools:ignore="ContentDescription" />
 
+
     <ImageView
         android:id="@+id/perfil"
         android:layout_width="168dp"
         android:layout_height="164dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="64dp"
         android:importantForAccessibility="no"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topsombra"
         app:srcCompat="@drawable/usuario" />
-
 
     <Button
         android:id="@+id/btnCambiarNombre"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="76dp"
         android:background="@drawable/fondo_verde_claro"
         android:text="@string/cambiar_nombre"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/perfil" />
 
@@ -119,28 +121,30 @@
         android:id="@+id/btnCambiarContraseña"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/fondo_verde_claro"
         android:text="@string/cambiar_contrasenia"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnCambiarNombre" />
-
 
     <Button
         android:id="@+id/btnBuscar"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/fondo_verde_claro"
         android:text="@string/ayuda"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bottomsombra"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCambiarContraseña" />
 
     <View
         android:id="@+id/view7"
@@ -148,9 +152,19 @@
         android:layout_height="89dp"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view9"
-        app:layout_constraintStart_toStartOf="@+id/bottompanel"
-        app:layout_constraintTop_toTopOf="@+id/bottompanel" />
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="1.5dp"
+        android:layout_height="89dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="1.0" />
 
     <View
         android:id="@+id/view9"
@@ -158,73 +172,95 @@
         android:layout_height="89dp"
         android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/bottompanel"
-        app:layout_constraintHorizontal_bias="0.665"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view5"
         app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/ajuste_imagen"
         android:layout_width="79dp"
         android:layout_height="79dp"
-        android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bottompanel"
         app:layout_constraintStart_toEndOf="@+id/view9"
-        app:layout_constraintTop_toTopOf="@+id/view6"
-        app:srcCompat="@drawable/ajuste" />
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/ajuste"
+        android:importantForAccessibility="no" />
 
     <ImageView
-        android:id="@+id/calendario_imagen"
+        android:id="@+id/regitro_imagen"
         android:layout_width="79dp"
         android:layout_height="79dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:srcCompat="@drawable/calendario" />
+        app:layout_constraintStart_toStartOf="@+id/bottompanel"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/registro" />
 
     <ImageView
-        android:id="@+id/grafica_imagen"
+        android:id="@+id/administrador_imagen"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view8"
+        app:layout_constraintStart_toEndOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/administrador" />
+
+    <ImageView
+        android:id="@+id/citas_imagen"
         android:layout_width="79dp"
         android:layout_height="79dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view9"
+        app:layout_constraintStart_toEndOf="@+id/view8"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:srcCompat="@drawable/cita" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="100dp"
+        android:layout_height="89dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/view7"
         app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:srcCompat="@drawable/grafica" />
+        app:layout_constraintVertical_bias="0.526" />
 
     <View
         android:id="@+id/view5"
-        android:layout_width="130dp"
+        android:layout_width="100dp"
         android:layout_height="89dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view9"
-        app:layout_constraintStart_toEndOf="@+id/view7"
-        app:layout_constraintTop_toBottomOf="@+id/bottomsombra" />
+        app:layout_constraintStart_toEndOf="@+id/view8"
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.526" />
 
     <View
         android:id="@+id/view6"
-        android:layout_width="130dp"
+        android:layout_width="100dp"
         android:layout_height="89dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bottompanel"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toEndOf="@+id/view9"
-        app:layout_constraintTop_toBottomOf="@+id/bottomsombra" />
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.526" />
 
     <View
         android:id="@+id/view"
-        android:layout_width="130dp"
+        android:layout_width="100dp"
         android:layout_height="89dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bottomsombra" />
+        app:layout_constraintTop_toTopOf="@+id/bottompanel"
+        app:layout_constraintVertical_bias="0.526" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

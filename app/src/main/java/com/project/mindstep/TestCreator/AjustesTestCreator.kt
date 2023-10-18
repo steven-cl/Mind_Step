@@ -1,5 +1,6 @@
 package com.project.mindstep.TestCreator
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.widget.ImageView
 import com.project.mindstep.R
 
 class AjustesTestCreator : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ajustes_test_creator)
@@ -18,8 +20,6 @@ class AjustesTestCreator : AppCompatActivity() {
         ajusteImagen.setOnClickListener { navigateToAjusteActivity() }
         graficaImagen.setOnClickListener { navigateToCrearTestActivity() }
         calendarioImagen.setOnClickListener { navigateToAdministrarActivity() }
-
-
     }
 
     private fun navigateToAjusteActivity() {

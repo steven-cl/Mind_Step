@@ -52,11 +52,7 @@ class FetchUsuariosAsyncTask(private @field:SuppressLint("StaticFieldLeak") val 
                     val fechaNac = resultSet.getString("FechaNac")
 
 
-
-
-
-
-                    if (correo == email && contrasenia == password) {
+                    if ((correo == email && contrasenia == password) || (email == usuario && contrasenia == password)) {
                         // Authentication successful
                         val userData = Bundle().apply {
                             putString("IdUsuarios", idUsuarios)
@@ -68,8 +64,6 @@ class FetchUsuariosAsyncTask(private @field:SuppressLint("StaticFieldLeak") val 
                             putString("Nombres", nombres)
                             putString("Apellidos", apellidos)
                             putString("FechaNac", fechaNac)
-
-
 
                             // Add other user data here...
                         }
@@ -83,7 +77,7 @@ class FetchUsuariosAsyncTask(private @field:SuppressLint("StaticFieldLeak") val 
                         }else if(userData.getString("IdRol", "") == "3"){
                             result = "3"
                         }
-                    }/* else {
+                    }/*else {
                         Toast.makeText(context, "Correo o contraseña invalidos", Toast.LENGTH_SHORT).show()
                     }*/
                 }
