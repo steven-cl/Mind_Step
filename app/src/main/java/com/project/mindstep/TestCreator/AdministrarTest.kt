@@ -1,9 +1,9 @@
 package com.project.mindstep.TestCreator
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import com.project.mindstep.R
 
 class AdministrarTest : AppCompatActivity() {
@@ -13,13 +13,9 @@ class AdministrarTest : AppCompatActivity() {
 
         val ajusteImagen: ImageView = findViewById(R.id.ajuste_imagen)
         val graficaImagen: ImageView = findViewById(R.id.grafica_imagen)
-        val calendarioImagen: ImageView = findViewById(R.id.calendario_imagen)
 
         ajusteImagen.setOnClickListener { navigateToAjusteActivity() }
         graficaImagen.setOnClickListener { navigateToCrearTestActivity() }
-        calendarioImagen.setOnClickListener { navigateToAdministrarActivity() }
-
-
     }
 
     private fun navigateToAjusteActivity() {
@@ -32,8 +28,4 @@ class AdministrarTest : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun navigateToAdministrarActivity() {
-        val intent = Intent(this, AdministrarTest::class.java)
-        startActivity(intent)
-    }
 }

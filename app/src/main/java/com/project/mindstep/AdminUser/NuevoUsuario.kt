@@ -31,12 +31,10 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         setContentView(R.layout.activity_nuevo_usuario)
 
         val ajusteImagen: ImageView = findViewById(R.id.ajuste_imagen)
-        val registroImagen: ImageView = findViewById(R.id.regitro_imagen)
         val administradorImagen: ImageView = findViewById(R.id.administrador_imagen)
         val citasImagen: ImageView = findViewById(R.id.citas_imagen)
 
         ajusteImagen.setOnClickListener { navigateToAjusteActivity() }
-        registroImagen.setOnClickListener { navigateToRegistroActivity() }
         administradorImagen.setOnClickListener { navigateToAdministradorActivity() }
         citasImagen.setOnClickListener { navigateToCitasActivity() }
 
@@ -243,11 +241,6 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
 
     private fun navigateToAjusteActivity() {
         val intent = Intent(this, AjustesAdmin::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigateToRegistroActivity() {
-        val intent = Intent(this, NuevoUsuario::class.java)
         startActivity(intent)
     }
 
