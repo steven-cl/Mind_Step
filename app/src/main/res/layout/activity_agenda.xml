@@ -315,5 +315,4 @@
             android:layout_height="10dp" />
 
     </TableLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -77,7 +77,7 @@ class FetchUsuariosAsyncTask(private @field:SuppressLint("StaticFieldLeak") val 
                         }else if(userData.getString("IdRol", "") == "3"){
                             result = "3"
                         }
-                    }/* else {
+                    }/*else {
                         Toast.makeText(context, "Correo o contraseña invalidos", Toast.LENGTH_SHORT).show()
                     }*/
                 }
