@@ -113,18 +113,6 @@
         app:srcCompat="@drawable/logo_icono"
         tools:ignore="ContentDescription" />
 
-    <TextView
-        android:id="@+id/pa_saber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/identidad_extra_bold_italic"
-        android:text="Prueba_Crear_test"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/bottompanel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topsombra" />
-
     <View
         android:id="@+id/view7"
         android:layout_width="1.5dp"

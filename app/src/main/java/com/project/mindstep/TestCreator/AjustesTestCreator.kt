@@ -2,9 +2,9 @@ package com.project.mindstep.TestCreator
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import com.project.mindstep.R
 
 class AjustesTestCreator : AppCompatActivity() {
@@ -13,18 +13,11 @@ class AjustesTestCreator : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ajustes_test_creator)
 
-        val ajusteImagen: ImageView = findViewById(R.id.ajuste_imagen)
         val graficaImagen: ImageView = findViewById(R.id.grafica_imagen)
         val calendarioImagen: ImageView = findViewById(R.id.calendario_imagen)
 
-        ajusteImagen.setOnClickListener { navigateToAjusteActivity() }
         graficaImagen.setOnClickListener { navigateToCrearTestActivity() }
         calendarioImagen.setOnClickListener { navigateToAdministrarActivity() }
-    }
-
-    private fun navigateToAjusteActivity() {
-        val intent = Intent(this, AjustesTestCreator::class.java)
-        startActivity(intent)
     }
 
     private fun navigateToCrearTestActivity() {

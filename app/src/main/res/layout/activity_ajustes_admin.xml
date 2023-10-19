@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         />
+
     <View
         android:id="@+id/topsombra"
         android:layout_width="wrap_content"
@@ -88,63 +89,6 @@
         app:layout_constraintVertical_bias="0.538"
         app:srcCompat="@drawable/logo_icono"
         tools:ignore="ContentDescription" />
-
-
-    <ImageView
-        android:id="@+id/perfil"
-        android:layout_width="168dp"
-        android:layout_height="164dp"
-        android:layout_marginTop="64dp"
-        android:importantForAccessibility="no"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topsombra"
-        app:srcCompat="@drawable/usuario" />
-
-    <Button
-        android:id="@+id/btnCambiarNombre"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="76dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="@string/cambiar_nombre"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/perfil" />
-
-
-    <Button
-        android:id="@+id/btnCambiarContraseña"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="@string/cambiar_contrasenia"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCambiarNombre" />
-
-    <Button
-        android:id="@+id/btnBuscar"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="@string/ayuda"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/bottomsombra"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCambiarContraseña" />
 
     <View
         android:id="@+id/view7"
@@ -262,5 +206,62 @@
         app:layout_constraintTop_toTopOf="@+id/bottompanel"
         app:layout_constraintVertical_bias="0.526" />
 
+    <!-- Contenido fuera del top bar y del bottom bar-->
+
+    <ImageView
+        android:id="@+id/perfil"
+        android:layout_width="168dp"
+        android:layout_height="164dp"
+        android:layout_marginTop="64dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topsombra"
+        app:srcCompat="@drawable/usuario" />
+
+    <Button
+        android:id="@+id/btnCambiarNombre"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/fondo_verde_claro"
+        android:text="@string/cambiar_nombre"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/perfil" />
+
+
+    <Button
+        android:id="@+id/btnCambiarContraseña"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/fondo_verde_claro"
+        android:text="@string/cambiar_contrasenia"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCambiarNombre" />
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/fondo_verde_claro"
+        android:text="@string/ayuda"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bottomsombra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCambiarContraseña" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

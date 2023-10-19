@@ -1,9 +1,9 @@
 package com.project.mindstep.Medico
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import com.project.mindstep.R
 
 class Medicamentos : AppCompatActivity() {
@@ -15,13 +15,10 @@ class Medicamentos : AppCompatActivity() {
         val ajusteImagen: ImageView = findViewById(R.id.ajuste_imagen)
         val testImagen: ImageView = findViewById(R.id.test_imagen)
         val graficaImagen: ImageView = findViewById(R.id.grafica_imagen)
-        val pastillaImagen: ImageView = findViewById(R.id.pastilla_imagen)
 
         ajusteImagen.setOnClickListener { navigateToAjusteActivity() }
         testImagen.setOnClickListener { navigateToTestMedicoActivity() }
         graficaImagen.setOnClickListener { navigateToGraficaActivity() }
-        pastillaImagen.setOnClickListener { navigateToMedicamentosActivity() }
-
     }
 
     private fun navigateToAjusteActivity() {
@@ -39,8 +36,4 @@ class Medicamentos : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun navigateToMedicamentosActivity() {
-        val intent = Intent(this, Medicamentos::class.java)
-        startActivity(intent)
-    }
 }
