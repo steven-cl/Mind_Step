@@ -48,16 +48,15 @@
         android:layout_width="wrap_content"
         android:layout_height="1.2dp"
         android:layout_above="@id/bottompanel"
+        android:layout_gravity="center_horizontal"
         android:background="#494E4C"
-        android:visibility="visible"
+        android:elevation="50dp"
+        android:outlineAmbientShadowColor="@color/BackgroundColor"
+        android:outlineSpotShadowColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/bottompanel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_gravity="center_horizontal"
-        android:elevation="50dp"
-        android:outlineAmbientShadowColor="@color/BackgroundColor"
-        android:outlineSpotShadowColor="@color/black"
         tools:ignore="MissingConstraints"
         tools:targetApi="p" />
 
@@ -142,7 +141,7 @@
         app:srcCompat="@drawable/ajuste" />
 
     <ImageView
-        android:id="@+id/calendario_imagen"
+        android:id="@+id/crearTest"
         android:layout_width="79dp"
         android:layout_height="79dp"
         android:importantForAccessibility="no"
@@ -150,10 +149,10 @@
         app:layout_constraintEnd_toStartOf="@+id/view7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:srcCompat="@drawable/calendario" />
+        app:srcCompat="@drawable/test" />
 
     <ImageView
-        android:id="@+id/grafica_imagen"
+        android:id="@+id/administracionTest"
         android:layout_width="79dp"
         android:layout_height="79dp"
         android:importantForAccessibility="no"
@@ -161,7 +160,7 @@
         app:layout_constraintEnd_toStartOf="@+id/view9"
         app:layout_constraintStart_toEndOf="@+id/view7"
         app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:srcCompat="@drawable/grafica" />
+        app:srcCompat="@drawable/administrador" />
 
     <View
         android:id="@+id/view5"

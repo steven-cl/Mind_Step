@@ -61,29 +61,24 @@
         tools:ignore="MissingConstraints"
         tools:targetApi="p" />
 
-    <View
-        android:id="@+id/perfil_clickable"
-        android:layout_width="85dp"
-        android:layout_height="79dp"
-        android:layout_above="@id/perfil"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,MissingContraints" />
-
     <ImageView
         android:id="@+id/perfil"
-        android:layout_width="68dp"
+        android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="9dp"
-        app:layout_constraintBottom_toBottomOf="@+id/perfil_clickable"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/perfil_clickable"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="@+id/toppanel"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/usuario"
-        android:importantForAccessibility="no" />
+        app:srcCompat="@drawable/usuario" />
+
+    <Spinner
+        android:id="@+id/perfil_clickable"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@id/perfil"
+        app:layout_constraintEnd_toEndOf="@+id/toppanel"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textLogo"
@@ -147,7 +142,7 @@
         app:srcCompat="@drawable/ajuste" />
 
     <ImageView
-        android:id="@+id/calendario_imagen"
+        android:id="@+id/crearTest"
         android:layout_width="79dp"
         android:layout_height="79dp"
         android:importantForAccessibility="no"
@@ -155,10 +150,10 @@
         app:layout_constraintEnd_toStartOf="@+id/view7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:srcCompat="@drawable/calendario" />
+        app:srcCompat="@drawable/test" />
 
     <ImageView
-        android:id="@+id/grafica_imagen"
+        android:id="@+id/administracionTest"
         android:layout_width="79dp"
         android:layout_height="79dp"
         android:importantForAccessibility="no"
@@ -166,7 +161,7 @@
         app:layout_constraintEnd_toStartOf="@+id/view9"
         app:layout_constraintStart_toEndOf="@+id/view7"
         app:layout_constraintTop_toTopOf="@+id/bottompanel"
-        app:srcCompat="@drawable/grafica" />
+        app:srcCompat="@drawable/administrador" />
 
     <View
         android:id="@+id/view5"

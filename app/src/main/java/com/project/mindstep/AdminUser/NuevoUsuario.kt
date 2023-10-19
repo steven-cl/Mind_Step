@@ -3,9 +3,11 @@ package com.project.mindstep.AdminUser
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputLayout
+import com.project.mindstep.Login.Login
 import com.project.mindstep.R
 import java.text.SimpleDateFormat
 import java.util.*
@@ -67,6 +69,40 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
                     contrasenia.text.toString()
                 )
             }
+        }
+
+
+        val perfilClick : Spinner = findViewById(R.id.perfil_clickable)
+
+        val opcionesPerfil = listOf(" ","Cerrar Sesión")
+        val adaptersesion = ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesPerfil)
+        adaptersesion.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        perfilClick.adapter = adaptersesion
+
+        perfilClick.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parentView: AdapterView<*>,
+                selectedItemView: View,
+                position: Int,
+                id: Long
+            ) {
+                // Esto se ejecuta cuando se selecciona un elemento del Spinner
+                val item = parentView.getItemAtPosition(position).toString()
+                // Realiza acciones en función del elemento seleccionado
+                perfilClickable(item)
+            }
+
+            override fun onNothingSelected(parentView: AdapterView<*>?) {
+                // Esto se ejecuta cuando no se selecciona ningún elemento
+            }
+        })
+    }
+
+    private fun perfilClickable(opcion : String){
+        if(opcion == "Cerrar Sesión"){
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+            finishAfterTransition()
         }
     }
 
@@ -242,15 +278,18 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
     private fun navigateToAjusteActivity() {
         val intent = Intent(this, AjustesAdmin::class.java)
         startActivity(intent)
+        finishAfterTransition()
     }
 
     private fun navigateToAdministradorActivity() {
         val intent = Intent(this, AdministrarUsuarios::class.java)
         startActivity(intent)
+        finishAfterTransition()
     }
 
     private fun navigateToCitasActivity() {
         val intent = Intent(this, AsignarCitas::class.java)
         startActivity(intent)
+        finishAfterTransition()
     }
 }
