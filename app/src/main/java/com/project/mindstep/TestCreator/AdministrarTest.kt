@@ -1,5 +1,6 @@
 package com.project.mindstep.TestCreator
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -14,20 +15,24 @@ import com.project.mindstep.R
 
 class AdministrarTest : AppCompatActivity() {
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_administrar_test)
 
         val ajusteImagen: ImageView = findViewById(R.id.ajuste_imagen)
-        val graficaImagen: ImageView = findViewById(R.id.grafica_imagen)
-        val perfilClick : Spinner = findViewById(R.id.perfil_clickable)
-
-        val opcionesPerfil = listOf(" ", "Cerrar Sesión", "Perfil")
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesPerfil)
-        perfilClick.adapter = adapter
+        val CreacionTest: ImageView = findViewById(R.id.crearTest)
 
         ajusteImagen.setOnClickListener { navigateToAjusteActivity() }
-        graficaImagen.setOnClickListener { navigateToCrearTestActivity() }
+        CreacionTest.setOnClickListener { navigateToCrearTestActivity() }
+
+        val perfilClick : Spinner = findViewById(R.id.perfil_clickable)
+
+        val opcionesPerfil = listOf(" ","Cerrar Sesión")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesPerfil)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        perfilClick.adapter = adapter
+
 
         perfilClick.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -49,23 +54,22 @@ class AdministrarTest : AppCompatActivity() {
     }
 
     private fun perfilClickable(opcion : String){
-       /*if (opcion == "Perfil"){
-
-        }else */if(opcion == "Cerrar Sesión"){
+       if(opcion == "Cerrar Sesión"){
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
-            finish()
-            onDestroy()
+            finishAfterTransition()
         }
     }
 
     private fun navigateToAjusteActivity() {
         val intent = Intent(this, AjustesTestCreator::class.java)
         startActivity(intent)
+        finishAfterTransition()
     }
 
     private fun navigateToCrearTestActivity() {
         val intent = Intent(this, CrearTest::class.java)
         startActivity(intent)
+        finishAfterTransition()
     }
 }

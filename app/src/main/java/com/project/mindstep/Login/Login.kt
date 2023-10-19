@@ -80,14 +80,16 @@ class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
         if(result == "4"){
             // Authentication successful, navigate to the Agenda activity
             startActivity(Intent(this, Agenda::class.java))
+            finishAfterTransition()
         }else if (result == "2"){
             startActivity(Intent(this, Resultados::class.java))
+            finishAfterTransition()
         }else if (result == "1"){
             startActivity(Intent(this, NuevoUsuario::class.java))
-        }else if (result == "3"){
+            finishAfterTransition()
+        }else if (result == "3") {
             startActivity(Intent(this, CrearTest::class.java))
+            finishAfterTransition()
         }
-        //finalizar esta actividad, para que no se pueda volver al login
-        finish()
     }
 }

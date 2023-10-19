@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     private fun reenvio(){
         val intent = Intent(this, Login::class.java)
         startActivity(intent)
-        finish()
+        finishAfterTransition()
     }
 
 
