@@ -243,6 +243,7 @@
         android:gravity="center"
         android:hint="@string/buscar_usuario_administrar"
         android:inputType="text"
+        android:textColorHint="@color/black"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topsombra" />
@@ -286,6 +287,7 @@
             <TextView
                 android:layout_width="114dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/Expediente"
                 android:textSize="16sp" />
 
@@ -309,6 +311,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/cedula"
                 android:textSize="16sp" />
 
@@ -331,6 +334,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/nombres"
                 android:textSize="16sp" />
 
@@ -353,6 +357,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/Apellidos"
                 android:textSize="16sp" />
 
