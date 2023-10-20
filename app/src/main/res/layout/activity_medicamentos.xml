@@ -224,4 +224,150 @@
         app:layout_constraintTop_toTopOf="@+id/bottompanel"
         app:layout_constraintVertical_bias="0.526" />
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottompanel"
+        app:layout_constraintTop_toBottomOf="@+id/topsombra"
+        tools:ignore="MissingConstraints,ScrollViewCount"
+        tools:layout_editor_absoluteX="1dp"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:autofillHints="buscar"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/fondo_verde_claro"
+        android:gravity="center"
+        android:hint="@string/buscar_usuario_administrar"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topsombra" />
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:background="@drawable/fondo_verde_claro"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/buscar_usuario"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topsombra" />
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="350dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/fondo_verde_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <TableRow
+            android:layout_width="288dp"
+            android:layout_height="48dp">
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Expediente"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtExpediente"
+                android:layout_width="215dp"
+                android:layout_height="48dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="48dp">
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cedula"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtCedula"
+                android:layout_width="215dp"
+                android:layout_height="48dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="48dp">
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombres"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtNombres"
+                android:layout_width="215dp"
+                android:layout_height="48dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="48dp">
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Apellidos"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtApellidos"
+                android:layout_width="215dp"
+                android:layout_height="48dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+    </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

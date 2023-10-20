@@ -1,5 +1,6 @@
 package com.project.mindstep.Medico
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -12,6 +13,9 @@ import com.project.mindstep.Login.Login
 import com.project.mindstep.R
 
 class TestMedico : AppCompatActivity() {
+
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_medico)
