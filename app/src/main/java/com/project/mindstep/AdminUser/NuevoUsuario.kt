@@ -62,11 +62,12 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
             if (validateFields()) {
                 val validateTask = ValidarDatosNuevoUsuarioAsyncTask(this)
                 validateTask.execute(
-                    expediente.text.toString(),
                     cedula.text.toString(),
                     username.text.toString(),
                     correo.text.toString(),
-                    contrasenia.text.toString()
+                    contrasenia.text.toString(),
+                    expediente.text.toString(),
+                    tipoCuenta.selectedItem.toString()
                 )
             }
         }
@@ -111,22 +112,33 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         if (result) {
             Toast.makeText(this, "Uno de los datos ya existe en la base de datos", Toast.LENGTH_SHORT).show()
         } else {
+            val tipoCuentaValue = convertirRolANumero(tipoCuenta.selectedItem.toString())
+
             // Continue with the insertion of data
             val insertTask = InsertarNuevoUsuarioAsyncTask(this)
             insertTask.execute(
-                expediente.text.toString(),
+                tipoCuentaValue.toString(),
+                username.text.toString(),
+                contrasenia.text.toString(),
+                correo.text.toString(),
                 cedula.text.toString(),
                 nombres.text.toString(),
                 apellidos.text.toString(),
-                username.text.toString(),
-                correo.text.toString(),
-                contrasenia.text.toString(),
                 fechaNacimiento.text.toString(),
-                tipoCuenta.selectedItem.toString()
+                expediente.text.toString()
+
             )
         }
     }
-
+    private fun convertirRolANumero(rol: String): Int {
+        return when (rol) {
+            "Gestor de usuario" -> 1
+            "Medico" -> 2
+            "Creador de Test" -> 3
+            "Paciente" -> 4
+            else -> 4  // Manejar otros casos según tus necesidades
+        }
+    }
     // Add this method to show the Toast in the activity
     fun showInsertionToast(success: Boolean) {
         if (success) {
@@ -153,7 +165,6 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
     }
 
     private fun validateFields(): Boolean {
-
         // Utiliza TextInputLayout para mostrar mensajes de error debajo de los EditText
         val inputLayoutExpediente = findViewById<TextInputLayout>(R.id.inputLayoutExpediente)
         val inputLayoutCedula = findViewById<TextInputLayout>(R.id.inputLayoutCedula)
@@ -168,7 +179,6 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         val cedulaValue = cedula.text.toString()
         val nombresValue = nombres.text.toString()
         val apellidosValue = apellidos.text.toString()
-
         val correoValue = correo.text.toString()
         val contraseniaValue = contrasenia.text.toString()
         val fechaNacimientoValue = fechaNacimiento.text.toString()
@@ -177,12 +187,11 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         val cedulaPattern = Pattern.compile("^[a-zA-Z0-9-]+$")
         val nombresPattern = Pattern.compile("^[a-zA-Z ]+$")
         val apellidosPattern = Pattern.compile("^[a-zA-Z ]+$")
-
         val correoPattern = Pattern.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")
         val contraseniaPattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$")
 
         // You may customize the date format pattern according to your requirements
-        val dateFormatPattern = "dd/MM/yyyy"
+        val dateFormatPattern = "dd-MM-yyyy"
         val dateFormat = SimpleDateFormat(dateFormatPattern, Locale.getDefault())
 
         try {
@@ -193,16 +202,40 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
             return false
         }
 
+        if (tipoCuenta.selectedItem.toString() == "Paciente") {
+            if (expedienteValue.isEmpty() ||
+                cedulaValue.isEmpty() ||
+                nombresValue.isEmpty() ||
+                apellidosValue.isEmpty() ||
+                correoValue.isEmpty() ||
+                contraseniaValue.isEmpty()) {
+                Toast.makeText(this, "Todos los campos son obligatorios para los roles seleccionados", Toast.LENGTH_SHORT).show()
+                return false
+            }
 
-        if (!expedientePattern.matcher(expedienteValue).matches()) {
-            inputLayoutExpediente.error = "Numero de Expediente no válido"
-            return false
-        } else {
-            inputLayoutExpediente.error = null  // Limpiar el mensaje de error si la validación es exitosa
+
+            if (!expedientePattern.matcher(expedienteValue).matches()) {
+                inputLayoutExpediente.error = "Número de Expediente no válido"
+                return false
+            } else {
+                inputLayoutExpediente.error = null  // Limpiar el mensaje de error si la validación es exitosa
+            }
+
+
         }
 
+        if (tipoCuenta.selectedItem.toString() == "Gestor de usuario" ||
+            tipoCuenta.selectedItem.toString() == "Medico" ||
+            tipoCuenta.selectedItem.toString() == "Creador de Test") {
+            if (!expedienteValue.isEmpty()) {
+                Toast.makeText(this, "No añadir número de expediente al rol ${tipoCuenta.selectedItem}", Toast.LENGTH_SHORT).show()
+                return false
+            }
+        }
+
+
         if (!cedulaPattern.matcher(cedulaValue).matches()) {
-            inputLayoutCedula.error = "Cedula no válida"
+            inputLayoutCedula.error = "Cédula no válida"
             return false
         } else {
             inputLayoutCedula.error = null  // Limpiar el mensaje de error si la validación es exitosa
@@ -214,7 +247,6 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
         } else {
             inputLayoutNombre.error = null  // Limpiar el mensaje de error si la validación es exitosa
         }
-
 
         // Validación de Apellidos
         if (!apellidosPattern.matcher(apellidosValue).matches()) {
@@ -238,42 +270,11 @@ class NuevoUsuario : AppCompatActivity(), ValidarDatosNuevoUsuarioAsyncTask.Vali
             inputLayoutContrasenia.error = null  // Limpiar el mensaje de error si la validación es exitosa
         }
 
-        if (!expedientePattern.matcher(expedienteValue).matches()) {
-            Toast.makeText(this, "Número de expediente no válido", Toast.LENGTH_SHORT).show()
-            return false
-        }
 
-        if (!cedulaPattern.matcher(cedulaValue).matches()) {
-            Toast.makeText(this, "Número de cédula no válido", Toast.LENGTH_SHORT).show()
-            return false
-        }
 
-        if (!nombresPattern.matcher(nombresValue).matches()) {
-            Toast.makeText(this, "Nombres no válidos", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        if (!apellidosPattern.matcher(apellidosValue).matches()) {
-            Toast.makeText(this, "Apellidos no válidos", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        if (!correoPattern.matcher(correoValue).matches()) {
-            Toast.makeText(this, "Correo electrónico no válido", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        if (!contraseniaPattern.matcher(contraseniaValue).matches()) {
-            Toast.makeText(this, "Contraseña no válida", Toast.LENGTH_SHORT).show()
-            return false
-        }
-
-        if (tipoCuenta.selectedItemPosition == 0) {
-            Toast.makeText(this, "Selecciona un rol válido", Toast.LENGTH_SHORT).show()
-            return false
-        }
         return true
     }
+
 
     private fun navigateToAjusteActivity() {
         val intent = Intent(this, AjustesAdmin::class.java)

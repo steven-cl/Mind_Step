@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package com.project.mindstep.AdminUser
 
 import android.annotation.SuppressLint
@@ -15,69 +13,109 @@ class InsertarNuevoUsuarioAsyncTask(private @field:SuppressLint("StaticFieldLeak
     AsyncTask<String, Void, Boolean>() {
 
     @Deprecated("Deprecated in Java")
-    override fun doInBackground(vararg params: String): Boolean {
-        // Extract data from params
-        val expediente = params[0]
-        val cedula = params[1]
-        val nombres = params[2]
-        val apellidos = params[3]
-        val username = params[4]
-        val correo = params[5]
-        val contrasenia = params[6]
-        val fechaNacimiento = params[7]
-        val tipoCuenta = params[8]
+    override fun doInBackground(vararg params: String?): Boolean {
+        // Extraer datos de los parámetros
+        val idRol = params[0]
+        val usuario = params[1]
+        val contrasenia = params[2]
+        val correo = params[3]
+        val cedula = params[4]
+        val nombres = params[5]
+        val apellidos = params[6]
+        val fechaNac = params[7]
+        val expediente = params[8]  // Añadir el parámetro de expediente
 
-        // Calculate age
-        val edad = calcularEdad(fechaNacimiento)
-
-        // Split the fechaNacimiento into day, month, and year
-        val fechaParts = fechaNacimiento.split("/")
-        val diaNacimiento = fechaParts[0]
-        val mesNacimiento = fechaParts[1]
-        val yearNacimiento = fechaParts[2]
-
-        var connection: Connection? = null
+        val dateFormatPattern = "yyyy-MM-dd" // Formato que espera la base de datos
+        val dateFormat = SimpleDateFormat(dateFormatPattern, Locale.getDefault())
 
         try {
-            // Open a connection
-            connection = DataBaseConnection.getConnection()
-            if (connection != null) {
-                // Prepare the SQL statement for insertion
-                val sql = "INSERT INTO [dbo].[Usuarios] " +
-                        "(NumeroExpediente, Cedula, Nombres, Apellidos, Usuario, Correo, Contraseña, DiaNacimiento, MesNacimiento, AñoNacimiento, Edad, TipoUser) " +
-                        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            val fechaNacimiento = dateFormat.parse(fechaNac)
 
-                val preparedStatement: PreparedStatement = connection.prepareStatement(sql)
-                preparedStatement.setString(1, expediente)
-                preparedStatement.setString(2, cedula)
-                preparedStatement.setString(3, nombres)
-                preparedStatement.setString(4, apellidos)
-                preparedStatement.setString(5, username)
-                preparedStatement.setString(6, correo)
-                preparedStatement.setString(7, contrasenia)
-                preparedStatement.setString(8, diaNacimiento)
-                preparedStatement.setString(9, mesNacimiento)
-                preparedStatement.setString(10, yearNacimiento)
-                preparedStatement.setInt(11, edad)
-                preparedStatement.setString(12, tipoCuenta)
+            // Abrir una conexión
+            val connection = DataBaseConnection.getConnection()
+            connection?.use { conn ->
+                // Preparar la sentencia SQL para la inserción con los valores dinámicos
+                val sql = """
+                INSERT INTO [dbo].[Usuarios] 
+                ([IdUsuarios], [IdRol], [Usuario], [Contraseña], [Correo], [Cedula], [Nombres], [Apellidos], [FechaNac]) 
+                VALUES ((SELECT ISNULL(MAX([IdUsuarios]), 0) + 1 FROM [dbo].[Usuarios]), ?, ?, ?, ?, ?, ?, ?, ?)
+            """.trimIndent()
 
-                // Execute the insertion
+                val preparedStatement = conn.prepareStatement(sql)
+                preparedStatement.setString(1, idRol)
+                preparedStatement.setString(2, usuario)
+                preparedStatement.setString(3, contrasenia)
+                preparedStatement.setString(4, correo)
+                preparedStatement.setString(5, cedula)
+                preparedStatement.setString(6, nombres)
+                preparedStatement.setString(7, apellidos)
+
+                // Convierte la fecha a java.sql.Date y configúrala en el PreparedStatement
+                val sqlDate = java.sql.Date(fechaNacimiento.time)
+                preparedStatement.setDate(8, sqlDate)
+
+                // Ejecutar la inserción en la tabla Usuarios
                 preparedStatement.executeUpdate()
 
+                // Obtener el IdUsuario recién insertado
+                val idUsuario = obtenerUltimoIdUsuario(conn)
+
+                // Insertar en la tabla Paciente (solo si es un paciente)
+                if (idRol == "4") {  // Suponiendo que "4" es el IdRol para "Paciente"
+                    if (expediente != null) {
+                        insertarPaciente(conn, idUsuario, expediente)
+                    }
+                }
+
                 return true
-            } else {
+            } ?: run {
                 Log.e("InsertarNuevoUsuario", "Error de conexión")
             }
         } catch (e: Exception) {
             e.printStackTrace()
             Log.e("InsertarNuevoUsuario", "Error al insertar usuario", e)
-        } finally {
-            // Close the connection
-            DataBaseConnection.closeConnection(connection)
         }
 
         return false
     }
+
+    private fun obtenerUltimoIdUsuario(connection: Connection): Int {
+        val sql = "SELECT MAX(IdUsuarios + 1) FROM Usuarios"
+        val preparedStatement = connection.prepareStatement(sql)
+        val resultSet = preparedStatement.executeQuery()
+
+        return if (resultSet.next()) {
+            resultSet.getInt(1)
+        } else {
+            0  // Si no se encontró ningún IdUsuario
+        }
+    }
+
+    private fun insertarPaciente(connection: Connection, idUsuario: Int, expediente: String) {
+        // Obtén el próximo valor de idPaciente
+        val nextIdPaciente = obtenerProximoIdPaciente(connection)
+
+        // Inserta el nuevo registro en la tabla Paciente con el valor de idPaciente obtenido
+        val sql = "INSERT INTO Paciente (idPaciente, IdUsuario, Expediente) VALUES (?, ?, ?)"
+        val preparedStatement = connection.prepareStatement(sql)
+        preparedStatement.setInt(1, nextIdPaciente)
+        preparedStatement.setInt(2, idUsuario)
+        preparedStatement.setString(3, expediente)
+        preparedStatement.executeUpdate()
+    }
+
+    private fun obtenerProximoIdPaciente(connection: Connection): Int {
+        val sql = "SELECT ISNULL(MAX(idPaciente) + 1, 1) FROM Paciente"
+        val preparedStatement = connection.prepareStatement(sql)
+        val resultSet = preparedStatement.executeQuery()
+
+        return if (resultSet.next()) {
+            resultSet.getInt(1)
+        } else {
+            1  // Si no se encontró ningún valor, devuelve 1 como valor predeterminado
+        }
+    }
+
 
     @Deprecated("Deprecated in Java")
     override fun onPostExecute(result: Boolean) {
@@ -89,15 +127,5 @@ class InsertarNuevoUsuarioAsyncTask(private @field:SuppressLint("StaticFieldLeak
         } else {
             // Handle insertion failure if needed
         }
-    }
-
-    private fun calcularEdad(fechaNacimiento: String): Int {
-        val formato = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
-        val fechaNacimientoDate = formato.parse(fechaNacimiento)
-        val fechaActual = Calendar.getInstance().time
-
-        val diff = fechaActual.time - fechaNacimientoDate!!.time
-        val edadMillis = diff / (24 * 60 * 60 * 1000 * 365.25) // Milliseconds to years
-        return edadMillis.toInt()
     }
 }

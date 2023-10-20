@@ -19,22 +19,18 @@ class ValidarDatosNuevoUsuarioAsyncTask(
 
     @Deprecated("Deprecated in Java")
     override fun doInBackground(vararg params: String): Boolean {
-        val numeroExpediente = params[0]
-        val numeroCedula = params[1]
-        val nombreUsuario = params[2]
-        val correo = params[3]
-        val contrasenia = params[4]
+        val numeroCedula = params[0]
+        val nombreUsuario = params[1]
+        val correo = params[2]
+        val contrasenia = params[3]
+        val expediente = params[4]  // Agregar el número de expediente
+        val tipoUsuario = params[5]  // Agregar el tipo de usuario
 
         var connection: Connection? = null
 
         try {
             connection = DataBaseConnection.getConnection()
             if (connection != null) {
-                // Validar NumeroExpediente
-                if (existeDato(connection, "NumeroExpediente", numeroExpediente)) {
-                    return true
-                }
-
                 // Validar NumeroCedula
                 if (existeDato(connection, "Cedula", numeroCedula)) {
                     return true
@@ -55,24 +51,43 @@ class ValidarDatosNuevoUsuarioAsyncTask(
                     return true
                 }
 
+                // Validar Expediente solo si el tipo de usuario es "Paciente"
+                if (tipoUsuario == "4" && existeDatoExpediente(connection, expediente)) {
+                    return true
+                }
+
                 return false
             } else {
-                Log.e("ValidarDatosNuevoUsuario", "Error de conexión")
+                Log.e("ValidarDatosUnicosAsyncTask", "Error de conexión")
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            Log.e("ValidarDatosNuevoUsuario", "Error al validar datos", e)
+            Log.e("ValidarDatosUnicosAsyncTask", "Error al validar datos únicos", e)
         } finally {
             DataBaseConnection.closeConnection(connection)
         }
 
-        return true
+        return false
     }
 
     private fun existeDato(connection: Connection, columna: String, valor: String): Boolean {
-        val sql = "SELECT COUNT(*) FROM [dbo].[Usuarios] WHERE $columna = ?"
+        val sql = "SELECT COUNT(*) FROM [dbo].[Usuarios] WHERE $columna LIKE ?"
         val preparedStatement: PreparedStatement = connection.prepareStatement(sql)
         preparedStatement.setString(1, valor)
+
+        val resultSet: ResultSet = preparedStatement.executeQuery()
+        if (resultSet.next()) {
+            val count = resultSet.getInt(1)
+            return count > 0
+        }
+
+        return false
+    }
+
+    private fun existeDatoExpediente(connection: Connection, expediente: String): Boolean {
+        val sql = "SELECT COUNT(*) FROM [dbo].[Paciente] WHERE Expediente LIKE ?"
+        val preparedStatement: PreparedStatement = connection.prepareStatement(sql)
+        preparedStatement.setString(1, expediente)
 
         val resultSet: ResultSet = preparedStatement.executeQuery()
         if (resultSet.next()) {
