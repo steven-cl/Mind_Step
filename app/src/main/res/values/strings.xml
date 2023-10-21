@@ -38,4 +38,9 @@
     <string name="Hora">Hora:</string>
     <string name="CerrarSesion">Cerrar Sesión</string>
     <string name="resultados">Resultados</string>
+    <string name="nombreTest">Nombre del Test:</string>
+    <string name="descripcion">Descripcion:</string>
+    <string name="nombreTestHint">Ingrese el nombre del test</string>
+    <string name="descripcionHint">Ingrese la descripcion del test</string>
+    <string name="guardar">Guardar</string>
 </resources>

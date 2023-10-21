@@ -196,4 +196,90 @@
         app:layout_constraintTop_toBottomOf="@+id/bottomsombra"
         app:layout_constraintVertical_bias="0.0" />
 
+    <!--Contenido dentro de la pantalla principal-->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomsombra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topsombra">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:textColor="@color/black"
+                android:background="@drawable/fondo_verde_claro"
+                android:textSize="18sp"
+                android:text="@string/nombreTest"
+                android:gravity="center"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="50dp"
+                />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:background="@drawable/fondo_verde_claro"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="40dp"
+                android:inputType="text"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"
+                android:hint="@string/nombreTestHint"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:textColor="@color/black"
+                android:background="@drawable/fondo_verde_claro"
+                android:textSize="18sp"
+                android:text="@string/descripcion"
+                android:gravity="center"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="40dp"
+                />
+
+            <EditText
+                android:layout_width="300dp"
+                android:minHeight="48dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondo_verde_claro"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="40dp"
+                android:inputType="text"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"
+                android:gravity="center"
+                android:hint="@string/descripcionHint"/>
+
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/fondo_botones"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginBottom="50dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/guardar"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

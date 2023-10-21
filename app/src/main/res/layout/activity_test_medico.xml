@@ -253,7 +253,7 @@
         android:id="@+id/btnBuscar"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:background="@drawable/fondo_verde_claro"
+        android:background="@drawable/fondo_botones"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
         android:text="@string/buscar_usuario"

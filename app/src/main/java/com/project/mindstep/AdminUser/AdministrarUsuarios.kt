@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.project.mindstep.Login.Login
 import com.project.mindstep.R
 
+@Suppress("DEPRECATION")
 class AdministrarUsuarios : AppCompatActivity() {
 
     private lateinit var tipoDeCuenta : Spinner
@@ -86,6 +87,7 @@ class AdministrarUsuarios : AppCompatActivity() {
                 }
             })
 
+            @Suppress("DEPRECATION")
             buscarUsuarioTask.execute(cedula)
         }
 

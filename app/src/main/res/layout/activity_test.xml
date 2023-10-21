@@ -229,70 +229,35 @@
         app:layout_constraintVertical_bias="0.526" />
 
 
-    <TextView
-        android:id="@+id/textViewResultados"
-        android:layout_width="293dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="Tipo de test"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topsombra" />
-
-
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="122dp"
+        android:id="@+id/editText"
+        android:layout_width="200dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/black"
-
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:autofillHints="buscar"
         android:background="@drawable/fondo_verde_claro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResultados" />
-
-
-    <TextView
-        android:id="@+id/textViewNombreTest"
-        android:layout_width="293dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="Tipo de test"
+        android:gravity="center"
+        android:hint="@string/buscar_usuario_administrar"
+        android:inputType="text"
         android:textColor="@color/black"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
-
-    <Spinner
-        android:id="@+id/spinnerNombre"
-        android:layout_width="122dp"
-        android:layout_height="48dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/fondo_verde_claro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNombreTest" />
+        app:layout_constraintTop_toBottomOf="@+id/toppanel" />
 
     <Button
-        android:id="@+id/btnRealizar"
-        android:layout_width="150dp"
+        android:id="@+id/btnBuscar"
+        android:layout_width="100dp"
         android:layout_height="48dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/fondo_verde_claro"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/fondo_botones"
         android:text="@string/buscar_usuario"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerNombre" />
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/toppanel" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

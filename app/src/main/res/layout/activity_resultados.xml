@@ -253,7 +253,7 @@
         android:id="@+id/btnBuscar"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:background="@drawable/fondo_verde_claro"
+        android:background="@drawable/fondo_botones"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
         android:text="@string/buscar_usuario"
@@ -376,37 +376,25 @@
 
     </TableLayout>
 
-
-    <Button
-        android:id="@+id/BtnResultado"
-        android:layout_width="160dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="@string/resultados"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
-
     <Spinner
         android:id="@+id/Resultados"
         android:layout_width="120dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:layout_weight="1"
-        android:background="@drawable/fondo_verde_claro"
+        android:background="@drawable/fondo_botones"
         android:gravity="center"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnResultado" />
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
     <TextView
         android:id="@+id/mensaje1"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/Resultados"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -422,6 +410,8 @@
         android:id="@+id/mensaje2"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/mensaje1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

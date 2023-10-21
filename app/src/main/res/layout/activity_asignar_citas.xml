@@ -272,7 +272,7 @@
                 android:id="@+id/btnBuscar"
                 android:layout_width="100dp"
                 android:layout_height="48dp"
-                android:background="@drawable/fondo_verde_claro"
+                android:background="@drawable/fondo_botones"
                 android:text="@string/buscar_usuario"
                 android:textStyle="bold"
                 android:textColor="@color/black" />
@@ -445,7 +445,7 @@
                 android:id="@+id/btnAsignarCita"
                 android:layout_width="200dp"
                 android:layout_height="60dp"
-                android:background="@drawable/fondo_verde_claro"
+                android:background="@drawable/fondo_botones"
                 android:text="@string/asignar_cita"
                 android:textColor="@color/black"
                 android:textStyle="bold"
