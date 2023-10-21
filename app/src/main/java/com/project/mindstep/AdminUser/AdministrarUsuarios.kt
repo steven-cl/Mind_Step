@@ -3,6 +3,7 @@ package com.project.mindstep.AdminUser
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputFilter
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -14,10 +15,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.project.mindstep.Login.Login
 import com.project.mindstep.R
-import java.text.ParseException
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 class AdministrarUsuarios : AppCompatActivity() {
 
@@ -50,7 +47,20 @@ class AdministrarUsuarios : AppCompatActivity() {
         etCorreo = findViewById(R.id.etCorreo)
         etContrasenia = findViewById(R.id.etContraseña)
 
+        // Find the EditText for searching by cedula
         val editText = findViewById<EditText>(R.id.editText)
+
+        // Allow letters, numbers, and "-"
+        val inputFilter = InputFilter { source, start, end, dest, dstart, dend ->
+            for (i in start until end) {
+                val c = source[i]
+                if (!Character.isLetterOrDigit(c) && c != '-') {
+                    return@InputFilter ""
+                }
+            }
+            null
+        }
+        editText.filters = arrayOf(inputFilter)
 
         val btnBuscar = findViewById<Button>(R.id.btnBuscar)
 
