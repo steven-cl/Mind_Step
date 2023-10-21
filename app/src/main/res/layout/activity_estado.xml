@@ -63,8 +63,8 @@
 
     <ImageView
         android:id="@+id/perfil"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:importantForAccessibility="no"
@@ -98,8 +98,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="79dp"
-        android:layout_height="67dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="4dp"
         app:layout_constraintBottom_toBottomOf="@+id/toppanel"
         app:layout_constraintStart_toStartOf="@+id/toppanel"
@@ -140,8 +140,8 @@
 
     <ImageView
         android:id="@+id/ajuste_imagen"
-        android:layout_width="79dp"
-        android:layout_height="79dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bottompanel"
         app:layout_constraintStart_toEndOf="@+id/view9"
@@ -151,8 +151,8 @@
 
     <ImageView
         android:id="@+id/calendario_imagen"
-        android:layout_width="79dp"
-        android:layout_height="79dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view7"
@@ -162,8 +162,8 @@
 
     <ImageView
         android:id="@+id/grafica_imagen"
-        android:layout_width="79dp"
-        android:layout_height="79dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view8"
@@ -173,8 +173,8 @@
 
     <ImageView
         android:id="@+id/test_imagen"
-        android:layout_width="79dp"
-        android:layout_height="79dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view9"
