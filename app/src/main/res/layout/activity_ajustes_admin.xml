@@ -80,8 +80,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="79dp"
-        android:layout_height="67dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:layout_marginStart="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/toppanel"
         app:layout_constraintStart_toStartOf="@+id/toppanel"
@@ -122,8 +122,8 @@
 
     <ImageView
         android:id="@+id/ajuste_imagen"
-        android:layout_width="79dp"
-        android:layout_height="79dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/bottompanel"
         app:layout_constraintStart_toEndOf="@+id/view9"
@@ -133,8 +133,8 @@
 
     <ImageView
         android:id="@+id/regitro_imagen"
-        android:layout_width="79dp"
-        android:layout_height="79dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view7"
@@ -144,8 +144,8 @@
 
     <ImageView
         android:id="@+id/administrador_imagen"
-        android:layout_width="79dp"
-        android:layout_height="79dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view8"
@@ -155,8 +155,8 @@
 
     <ImageView
         android:id="@+id/citas_imagen"
-        android:layout_width="79dp"
-        android:layout_height="79dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view9"
