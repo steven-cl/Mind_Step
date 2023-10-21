@@ -237,25 +237,23 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
             android:orientation="vertical">
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginStart="25dp"
                 android:orientation="horizontal">
 
-                <Space
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content" />
 
                 <EditText
                     android:id="@+id/editText"
                     android:layout_width="200dp"
                     android:layout_height="48dp"
                     android:textColor="@color/black"
+                    android:textColorHint="@color/black"
                     android:hint="@string/buscar_usuario_administrar"
                     android:background="@drawable/fondo_verde_claro"
                     android:autofillHints="buscar"
@@ -263,14 +261,12 @@
                     android:gravity="center"/>
 
 
-                <Space
-                    android:layout_width="35dp"
-                    android:layout_height="wrap_content" />
 
                 <Button
                     android:id="@+id/btnBuscar"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
+                    android:layout_marginStart="35dp"
                     android:background="@drawable/fondo_botones"
                     android:text="@string/buscar_usuario"
                     android:textStyle="bold"
@@ -278,39 +274,28 @@
 
             </LinearLayout>
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="50dp" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="450dp"
+                android:layout_marginTop="50dp"
                 android:orientation="horizontal">
-
-                <Space
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"/>
 
                 <TableLayout
                     android:id="@+id/tableLayout"
                     android:layout_width="350dp"
                     android:layout_height="445dp"
+                    android:layout_marginStart="30dp"
                     android:background="@drawable/fondo_verde_claro">
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"/>
 
                     <TableRow
                         android:layout_width="288dp"
                         android:layout_height="48dp">
 
-                        <Space
-                            android:layout_width="10dp"
-                            android:layout_height="wrap_content" />
-
                         <TextView
                             android:layout_width="93dp"
+                            android:layout_marginStart="5dp"
                             android:layout_height="wrap_content"
                             android:textColor="@color/black"
                             android:text="@string/Expediente"
@@ -325,20 +310,16 @@
                             android:importantForAccessibility="no"
                             android:importantForAutofill="no"
                             android:inputType="text" />
-
                     </TableRow>
 
                     <TableRow
                         android:layout_width="wrap_content"
                         android:layout_height="48dp">
 
-                        <Space
-                            android:layout_width="10dp"
-                            android:layout_height="wrap_content" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
                             android:textColor="@color/black"
                             android:text="@string/cedula"
                             android:textSize="16sp" />
@@ -358,13 +339,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="48dp">
 
-                        <Space
-                            android:layout_width="10dp"
-                            android:layout_height="wrap_content" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
                             android:textColor="@color/black"
                             android:text="@string/nombres"
                             android:textSize="16sp" />
@@ -384,13 +362,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="48dp">
 
-                        <Space
-                            android:layout_width="10dp"
-                            android:layout_height="wrap_content" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
                             android:textColor="@color/black"
                             android:text="@string/Apellidos"
                             android:textSize="16sp" />
@@ -410,13 +385,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="48dp">
 
-                        <Space
-                            android:layout_width="10dp"
-                            android:layout_height="wrap_content" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:textColor="@color/black"
+                            android:layout_marginStart="5dp"
                             android:layout_height="wrap_content"
                             android:text="@string/FechaNac"
                             android:textSize="16sp" />
@@ -436,13 +408,10 @@
                         android:layout_width="278dp"
                         android:layout_height="48dp">
 
-                        <Space
-                            android:layout_width="10dp"
-                            android:layout_height="wrap_content" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
                             android:textColor="@color/black"
                             android:text="@string/tipo_de_cuenta"
                             android:textSize="16sp" />
@@ -457,13 +426,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="48dp">
 
-                        <Space
-                            android:layout_width="10dp"
-                            android:layout_height="wrap_content" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
                             android:textColor="@color/black"
                             android:text="@string/username"
                             android:textSize="16sp" />
@@ -483,13 +449,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="48dp">
 
-                        <Space
-                            android:layout_width="10dp"
-                            android:layout_height="wrap_content" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
                             android:textColor="@color/black"
                             android:text="@string/correo"
                             android:textSize="16sp" />
@@ -509,13 +472,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="48dp">
 
-                        <Space
-                            android:layout_width="10dp"
-                            android:layout_height="wrap_content" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
                             android:textColor="@color/black"
                             android:text="@string/contraseña_"
                             android:textSize="16sp" />
@@ -530,31 +490,25 @@
                             android:importantForAutofill="no"
                             android:inputType="textPassword" />
                     </TableRow>
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp" />
-
                 </TableLayout>
             </LinearLayout>
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"/>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
                 android:orientation="horizontal">
 
-                <Space
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"/>
+
 
                 <Button
                     android:id="@+id/btnModificar"
                     android:layout_width="200dp"
                     android:layout_height="48dp"
+                    android:layout_marginStart="100dp"
                     android:background="@drawable/fondo_botones"
                     android:text="@string/modificar"
                     android:textColor="@color/black"
@@ -562,9 +516,7 @@
 
             </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>
