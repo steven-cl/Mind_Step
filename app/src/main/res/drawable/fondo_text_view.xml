@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/white" /> <!-- Color de fondo -->
+    <solid android:color="@color/verde_botones" /> <!-- Color de fondo -->
     <stroke
         android:width="1dp"
         android:color="@color/black"/>            <!-- Ancho del borde en dp -->

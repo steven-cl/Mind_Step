@@ -6,8 +6,8 @@
   <path
       android:pathData="M303.2,303.2m-281.11,0a281.11,281.11 0,1 1,562.22 0a281.11,281.11 0,1 1,-562.22 0"
       android:strokeWidth="44.17"
-      android:fillColor="#94b5a4"
-      android:strokeColor="#94b5a4"/>
+      android:fillColor="@color/iconsColor"
+      android:strokeColor="@color/iconsColor"/>
   <path
       android:pathData="M303.2,242.96m-98.39,0a98.39,98.39 0,1 1,196.78 0a98.39,98.39 0,1 1,-196.78 0"
       android:fillColor="#fcf1eb"/>

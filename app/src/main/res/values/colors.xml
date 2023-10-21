@@ -7,9 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="MenuColor">#FCF1EB</color>
+    <color name="MenuColor">#34495E</color>
     <color name="BackgroundColor">#E4F4EA</color>
     <color name="verde">#94B5A4</color>
-    <color name="verde_botones">#92F7BD</color>
+    <color name="verde_botones">#FFEFBD</color>
     <color name="colorError">#FF0000</color>
+    <color name="iconsColor">#19D298</color>
 </resources>
