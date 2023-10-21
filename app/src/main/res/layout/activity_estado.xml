@@ -228,53 +228,79 @@
         app:layout_constraintTop_toTopOf="@+id/bottompanel"
         app:layout_constraintVertical_bias="0.526" />
 
-
-    <TextView
-        android:id="@+id/textViewResultados"
-        android:layout_width="293dp"
-        android:layout_height="48dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/fondo_verde_claro"
-        android:text="Resultados de la prueba"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomsombra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topsombra" />
+        app:layout_constraintTop_toBottomOf="@+id/toppanel">
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="172dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="60dp"
-        android:textColor="@color/black"
-        android:background="@drawable/fondo_verde_claro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResultados" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="300dp"
-        android:layout_height="48dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="48dp"
-        android:text="TextView"
-        android:background="@drawable/fondo_verde_claro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            <TextView
+                android:id="@+id/textViewResultados"
+                android:layout_width="293dp"
+                android:layout_height="48dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/fondo_verde_claro"
+                android:text="Resultados de la prueba"
+                android:layout_marginStart="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/topsombra" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="300dp"
-        android:layout_height="144dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="60dp"
-        android:text="TextView"
-        android:background="@drawable/fondo_verde_claro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="172dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="100dp"
+                android:textColor="@color/black"
+                android:background="@drawable/fondo_verde_claro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewResultados" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="40dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="48dp"
+                android:text="TextView"
+                android:background="@drawable/fondo_verde_claro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="300dp"
+                android:layout_height="144dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="40dp"
+                android:text="TextView"
+                android:background="@drawable/fondo_verde_claro" />
+
+            <com.project.mindstep.Paciente.PieChartView
+                android:id="@+id/pieChartView"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="60dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
