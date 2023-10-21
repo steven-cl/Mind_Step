@@ -62,9 +62,16 @@ class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
                 val fetchUsuariosAsyncTask = FetchUsuariosAsyncTask(this, this)
                 @Suppress("DEPRECATION")
                 fetchUsuariosAsyncTask.execute(email, password)
-            } else {
+            }
+            else if (email.isNotEmpty() && !password.isNotEmpty()) {
+                Toast.makeText(this, "Ingrese Una Contraseña", Toast.LENGTH_SHORT).show()
+            }
+            else if (!email.isNotEmpty() && password.isNotEmpty()) {
+                Toast.makeText(this, "Ingrese Un Usuario", Toast.LENGTH_SHORT).show()
+            }
+            else {
                 // Show a toast message for empty fields
-                Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Ingrese Usuario y Contraseña", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -90,6 +97,9 @@ class Login : AppCompatActivity(), FetchUsuariosAsyncTask.TaskListener {
         }else if (result == "3") {
             startActivity(Intent(this, CrearTest::class.java))
             finishAfterTransition()
+        }
+        else{
+            Toast.makeText(this, "Usuario y Contraseña Incorrectos", Toast.LENGTH_SHORT).show()
         }
     }
 }

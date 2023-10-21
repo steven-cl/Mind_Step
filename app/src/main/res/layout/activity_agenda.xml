@@ -249,6 +249,7 @@
             <TextView
                 android:layout_width="114dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/proxima_cita"
                 android:textSize="16sp" />
 
@@ -272,6 +273,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/Fecha"
                 android:textSize="16sp" />
 
@@ -294,6 +296,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/Hora"
                 android:textSize="16sp" />
 

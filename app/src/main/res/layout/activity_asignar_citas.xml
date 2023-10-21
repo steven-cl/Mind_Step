@@ -313,6 +313,7 @@
                         <TextView
                             android:layout_width="114dp"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/Expediente"
                             android:textSize="16sp" />
 
@@ -336,6 +337,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/cedula"
                             android:textSize="16sp" />
 
@@ -359,6 +361,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/nombres"
                             android:textSize="16sp" />
 
@@ -382,6 +385,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/Apellidos"
                             android:textSize="16sp" />
 

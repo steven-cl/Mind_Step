@@ -312,6 +312,7 @@
                         <TextView
                             android:layout_width="93dp"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/Expediente"
                             android:textSize="16sp" />
 
@@ -319,6 +320,8 @@
                             android:id="@+id/etExpediente"
                             android:layout_width="180dp"
                             android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
                             android:importantForAccessibility="no"
                             android:importantForAutofill="no"
                             android:inputType="text" />
@@ -336,6 +339,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/cedula"
                             android:textSize="16sp" />
 
@@ -343,6 +347,8 @@
                             android:id="@+id/etCedula"
                             android:layout_width="180dp"
                             android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
                             android:importantForAccessibility="no"
                             android:importantForAutofill="no"
                             android:inputType="text" />
@@ -359,6 +365,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/nombres"
                             android:textSize="16sp" />
 
@@ -366,6 +373,8 @@
                             android:id="@+id/etNombres"
                             android:layout_width="180dp"
                             android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
                             android:importantForAccessibility="no"
                             android:importantForAutofill="no"
                             android:inputType="text" />
@@ -382,6 +391,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/Apellidos"
                             android:textSize="16sp" />
 
@@ -389,6 +399,8 @@
                             android:id="@+id/etApellidos"
                             android:layout_width="180dp"
                             android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
                             android:importantForAccessibility="no"
                             android:importantForAutofill="no"
                             android:inputType="text" />
@@ -404,6 +416,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/black"
                             android:layout_height="wrap_content"
                             android:text="@string/FechaNac"
                             android:textSize="16sp" />
@@ -412,6 +425,8 @@
                             android:id="@+id/etFechaNac"
                             android:layout_width="180dp"
                             android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
                             android:importantForAccessibility="no"
                             android:importantForAutofill="no"
                             android:inputType="date" />
@@ -428,6 +443,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/tipo_de_cuenta"
                             android:textSize="16sp" />
 
@@ -448,6 +464,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/username"
                             android:textSize="16sp" />
 
@@ -455,6 +472,8 @@
                             android:id="@+id/etUsuario"
                             android:layout_width="180dp"
                             android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
                             android:importantForAccessibility="no"
                             android:importantForAutofill="no"
                             android:inputType="text" />
@@ -471,6 +490,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/correo"
                             android:textSize="16sp" />
 
@@ -478,6 +498,8 @@
                             android:id="@+id/etCorreo"
                             android:layout_width="180dp"
                             android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
                             android:importantForAccessibility="no"
                             android:importantForAutofill="no"
                             android:inputType="textEmailAddress" />
@@ -494,6 +516,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/black"
                             android:text="@string/contraseña_"
                             android:textSize="16sp" />
 
@@ -501,6 +524,8 @@
                             android:id="@+id/etContraseña"
                             android:layout_width="180dp"
                             android:layout_height="48dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
                             android:importantForAccessibility="no"
                             android:importantForAutofill="no"
                             android:inputType="textPassword" />

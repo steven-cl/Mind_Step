@@ -14,11 +14,14 @@ import com.project.mindstep.R
 
 class Resultados : AppCompatActivity() {
 
+    private lateinit var resultados: Spinner
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultados)
 
+        resultados = findViewById(R.id.Resultados)
 
         val ajusteImagen: ImageView = findViewById(R.id.ajuste_imagen)
         val testImagen: ImageView = findViewById(R.id.test_imagen)
@@ -28,6 +31,10 @@ class Resultados : AppCompatActivity() {
         testImagen.setOnClickListener { navigateToTestMedicoActivity() }
         pastillaImagen.setOnClickListener { navigateToMedicamentosActivity() }
 
+        val resultado = listOf("Paciente")
+        val adapter2 = ArrayAdapter(this, android.R.layout.simple_spinner_item, resultado)
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        resultados.adapter = adapter2
 
         val perfilClick : Spinner = findViewById(R.id.perfil_clickable)
 
