@@ -266,7 +266,15 @@
                 android:gravity="center"
                 android:hint="@string/descripcionHint"/>
 
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/containerLayout"
+                android:orientation="vertical"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                >
+            </LinearLayout>
             <Button
                 android:layout_width="150dp"
                 android:layout_height="48dp"

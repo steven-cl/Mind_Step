@@ -2,10 +2,9 @@ package com.project.mindstep.AdminUser
 
 import android.os.AsyncTask
 import android.util.Log
+import com.project.mindstep.DataBaseConnection
 import java.sql.Connection
 import java.sql.PreparedStatement
-import com.project.mindstep.DataBaseConnection
-import java.sql.Date
 
 class ModificarUsuarioAsyncTask(
     private val listener: ModificarUsuarioListener

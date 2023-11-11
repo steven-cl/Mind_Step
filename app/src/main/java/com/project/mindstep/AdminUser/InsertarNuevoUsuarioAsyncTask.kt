@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.project.mindstep.AdminUser
 
 import android.annotation.SuppressLint
@@ -5,10 +7,10 @@ import android.os.AsyncTask
 import android.util.Log
 import com.project.mindstep.DataBaseConnection
 import java.sql.Connection
-import java.sql.PreparedStatement
 import java.text.SimpleDateFormat
 import java.util.*
 
+@Suppress("DEPRECATION")
 class InsertarNuevoUsuarioAsyncTask(private @field:SuppressLint("StaticFieldLeak") val context: NuevoUsuario) :
     AsyncTask<String, Void, Boolean>() {
 
@@ -29,20 +31,20 @@ class InsertarNuevoUsuarioAsyncTask(private @field:SuppressLint("StaticFieldLeak
         val dateFormat = SimpleDateFormat(dateFormatPattern, Locale.getDefault())
 
         try {
-            val fechaNacimiento = dateFormat.parse(fechaNac)
+            val fechaNacimiento = dateFormat.parse(fechaNac.toString())
 
             // Abrir una conexión
             val connection = DataBaseConnection.getConnection()
             connection?.use { conn ->
                 // Preparar la sentencia SQL para la inserción con los valores dinámicos
                 val sql = """
-                INSERT INTO [dbo].[Usuarios] 
-                ([IdUsuarios], [IdRol], [Usuario], [Contraseña], [Correo], [Cedula], [Nombres], [Apellidos], [FechaNac]) 
-                VALUES ((SELECT ISNULL(MAX([IdUsuarios]), 0) + 1 FROM [dbo].[Usuarios]), ?, ?, ?, ?, ?, ?, ?, ?)
-            """.trimIndent()
+    INSERT INTO [dbo].[Usuarios] 
+    ([IdRol], [Usuario], [Contraseña], [Correo], [Cedula], [Nombres], [Apellidos], [FechaNac]) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+""".trimIndent()
 
                 val preparedStatement = conn.prepareStatement(sql)
-                preparedStatement.setString(1, idRol)
+                preparedStatement.setString(1, idRol) // Configura IdRol en la sentencia SQL
                 preparedStatement.setString(2, usuario)
                 preparedStatement.setString(3, contrasenia)
                 preparedStatement.setString(4, correo)
@@ -50,9 +52,12 @@ class InsertarNuevoUsuarioAsyncTask(private @field:SuppressLint("StaticFieldLeak
                 preparedStatement.setString(6, nombres)
                 preparedStatement.setString(7, apellidos)
 
-                // Convierte la fecha a java.sql.Date y configúrala en el PreparedStatement
-                val sqlDate = java.sql.Date(fechaNacimiento.time)
+// Convierte la fecha a java.sql.Date y configúrala en el PreparedStatement
+                val sqlDate = java.sql.Date(fechaNacimiento!!.time)
                 preparedStatement.setDate(8, sqlDate)
+
+// ...
+
 
                 // Ejecutar la inserción en la tabla Usuarios
                 preparedStatement.executeUpdate()

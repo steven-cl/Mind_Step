@@ -43,4 +43,9 @@
     <string name="nombreTestHint">Ingrese el nombre del test</string>
     <string name="descripcionHint">Ingrese la descripcion del test</string>
     <string name="guardar">Guardar</string>
+    <string name="Leve">Leve</string>
+    <string name="Moderado">Moderado</string>
+    <string name="Bastante">Bastante</string>
+    <string name="No">No</string>
+    <string name="siguiente">Siguiente</string>
 </resources>

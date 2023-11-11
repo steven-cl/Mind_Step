@@ -6,9 +6,7 @@ import java.sql.DriverManager
 import java.sql.SQLException
 
 object DataBaseConnection {
-
-    private const val DB_URL = "jdbc:jtds:sqlserver://20.3.8.83:1433/MindStep"
-
+    private const val DB_URL = "jdbc:jtds:sqlserver://10.5.32.74:1433/MindStep"
     private const val DB_USER = "sa"
     private const val DB_PASSWORD = "steven123"
 

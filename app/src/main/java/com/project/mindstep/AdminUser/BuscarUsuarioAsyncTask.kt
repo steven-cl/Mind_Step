@@ -2,10 +2,10 @@ package com.project.mindstep.AdminUser
 
 import android.os.AsyncTask
 import android.util.Log
+import com.project.mindstep.DataBaseConnection
 import java.sql.Connection
 import java.sql.PreparedStatement
 import java.sql.ResultSet
-import com.project.mindstep.DataBaseConnection
 
 class BuscarUsuarioAsyncTask(private val listener: BuscarUsuarioListener) : AsyncTask<String, Void, Usuario>() {
 

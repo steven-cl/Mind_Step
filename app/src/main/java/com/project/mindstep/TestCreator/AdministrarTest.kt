@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import com.project.mindstep.Login.Login
@@ -14,6 +15,8 @@ import com.project.mindstep.R
 
 
 class AdministrarTest : AppCompatActivity() {
+
+    private lateinit var containerLayout: LinearLayout
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
